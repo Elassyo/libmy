@@ -1,5 +1,5 @@
 /*
-** my_isupper.c for libmy in /home/arthur.melin/Code/libmy/srcs
+** my_isupper.c for libmy in /home/arthur.melin/Code/__libmy/src
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>

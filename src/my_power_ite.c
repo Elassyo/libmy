@@ -1,9 +1,9 @@
 /*
-** my_power_ite.c for libmy in /home/arthur.melin/Code/libmy/src
-** 
+** my_power_ite.c for libmy in /home/arthur.melin/Code/__libmy/src
+**
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
-** 
+**
 ** Started on  Wed Nov 16 21:49:14 2016 Arthur Melin
 ** Last update Wed Nov 16 21:52:49 2016 Arthur Melin
 */

@@ -1,5 +1,5 @@
 /*
-** my_printf_nbr_dec.c for PSU_2016_my_printf in /home/arthur.melin/Code/PSU_2016/PSU_2016_my_printf/src
+** my_printf_nbr_dec.c for PSU_2016_my_printf in /home/arthur.melin/Code/__libmy/src
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>

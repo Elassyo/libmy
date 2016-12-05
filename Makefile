@@ -1,5 +1,5 @@
 ##
-## Makefile for libmy in /home/arthur.melin/Code/libmy
+## Makefile for libmy in /home/arthur.melin/Code/__libmy
 ##
 ## Made by Arthur Melin
 ## Login   <arthur.melin@epitech.net>
@@ -65,6 +65,7 @@ SRC	=	my_find_prime_sup.c 	\
 		my_strcapitalize.c 	\
 		my_strcat.c 		\
 		my_strcmp.c 		\
+		my_strcmp_uncase.c	\
 		my_strcpy.c 		\
 		my_strdup.c 		\
 		my_str_isalpha.c 	\
