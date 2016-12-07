@@ -8,8 +8,8 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-#include "my.h"
 #include <stdlib.h>
+#include "my.h"
 
 char	*my_strdup(char *src)
 {

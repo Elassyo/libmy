@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.net>
 ##
 ## Started on  Mon Nov  7 15:41:08 2016 Arthur Melin
-## Last update Fri Nov 18 15:53:45 2016 Arthur Melin
+## Last update Wed Dec  7 13:56:31 2016 Arthur Melin
 ##
 
 CC	=	gcc
@@ -56,6 +56,7 @@ SRC	=	my_find_prime_sup.c 	\
 		my_putnbr_base.c 	\
 		my_put_nbr.c 		\
 		my_putstr_fd.c 		\
+		my_realloc.c		\
 		my_revstr.c 		\
 		my_showmem.c 		\
 		my_showstr.c 		\
@@ -64,6 +65,7 @@ SRC	=	my_find_prime_sup.c 	\
 		my_square_root.c 	\
 		my_strcapitalize.c 	\
 		my_strcat.c 		\
+		my_strchr.c		\
 		my_strcmp.c 		\
 		my_strcmp_uncase.c	\
 		my_strcpy.c 		\

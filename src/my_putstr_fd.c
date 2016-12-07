@@ -8,8 +8,8 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-#include "my.h"
 #include <unistd.h>
+#include "my.h"
 
 int	my_putstr_fd(int fd, char *str)
 {
