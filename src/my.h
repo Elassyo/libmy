@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Wed Dec  7 13:57:51 2016 Arthur Melin
+** Last update Wed Dec  7 21:32:24 2016 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -20,6 +20,7 @@
 # define my_puterr(str) my_putstr_fd(2, str)
 # define my_printf(...) my_fprintf(1, __VA_ARGS__)
 
+int	my_die(char *err_msg);
 long	my_power_ite(int nbr, int power);
 int	my_power_rec(int nbr, int power);
 int	my_square_root(int nbr);

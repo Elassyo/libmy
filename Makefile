@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.net>
 ##
 ## Started on  Mon Nov  7 15:41:08 2016 Arthur Melin
-## Last update Wed Dec  7 13:56:31 2016 Arthur Melin
+## Last update Wed Dec  7 21:31:41 2016 Arthur Melin
 ##
 
 CC	=	gcc
@@ -26,7 +26,8 @@ SRCDIR	=	src
 
 OBJDIR	=	tmp
 
-SRC	=	my_find_prime_sup.c 	\
+SRC	=	my_die.c		\
+		my_find_prime_sup.c 	\
 		my_getnbr_base.c 	\
 		my_getnbr.c 		\
 		my_isalnum.c 		\
