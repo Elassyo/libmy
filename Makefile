@@ -85,7 +85,8 @@ SRC	=	my_die.c		\
 		my_str_to_wordtab.c 	\
 		my_strupcase.c 		\
 		my_swap.c		\
-		my_read_file.c
+		my_read_file.c		\
+		my_read_file_bin.c
 
 HDR	=	my.h			\
 		my_printf.h
