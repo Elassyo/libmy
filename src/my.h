@@ -74,5 +74,6 @@ char	*my_strstr(char *str, char *to_find);
 int	my_swap(int *a, int *b);
 int	my_swap_char(char *a, char *b);
 int	my_swap_str(char **a, char **b);
+char	*my_read_file(int fd);
 
 #endif
