@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.net>
 ##
 ## Started on  Mon Nov  7 15:41:08 2016 Arthur Melin
-## Last update Wed Dec  7 21:31:41 2016 Arthur Melin
+## Last update Thu Dec  8 20:57:57 2016 Arthur Melin
 ##
 
 CC	=	gcc
@@ -101,7 +101,7 @@ all: $(NAME)
 $(INCDIR):
 	$(MKDIR) $(INCDIR)
 
-dist: $(NAME) | $(INCDIR)
+dist: $(NAME) | $(INCDIR) clean
 	$(CP) $(INC) $(INCDIR)/
 
 $(OBJDIR):

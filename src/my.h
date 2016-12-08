@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Wed Dec  7 21:32:24 2016 Arthur Melin
+** Last update Thu Dec  8 21:21:59 2016 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -75,5 +75,6 @@ int	my_swap(int *a, int *b);
 int	my_swap_char(char *a, char *b);
 int	my_swap_str(char **a, char **b);
 char	*my_read_file(int fd);
+char	*my_read_file_bin(int fd, int *size);
 
 #endif
