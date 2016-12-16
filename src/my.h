@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Thu Dec  8 21:21:59 2016 Arthur Melin
+** Last update Fri Dec 16 16:21:20 2016 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -20,7 +20,10 @@
 # define my_puterr(str) my_putstr_fd(2, str)
 # define my_printf(...) my_fprintf(1, __VA_ARGS__)
 
+typedef struct s_iobuf t_iobuf;
+
 int	my_die(char *err_msg);
+
 long	my_power_ite(int nbr, int power);
 int	my_power_rec(int nbr, int power);
 int	my_square_root(int nbr);
@@ -28,10 +31,12 @@ int	my_abs(int nbr);
 int	my_isneg(int nbr);
 int	my_is_prime(int nbr);
 int	my_find_prime_sup(int nbr);
+
 int	my_put_nbr(int nbr);
 int	my_putnbr_base(int nbr, char *base);
 int	my_getnbr(char *str);
 int	my_getnbr_base(char *str, char *base);
+
 int	my_isalnum(char c);
 int	my_isalpha(char c);
 int	my_isupper(char c);
@@ -39,11 +44,13 @@ int	my_islower(char c);
 int	my_isnum(char c);
 int	my_issign(char c);
 int	my_isprintable(char c);
+
 int	my_str_isalpha(char *str);
 int	my_str_islower(char *str);
 int	my_str_isnum(char *str);
 int	my_str_isprintable(char *str);
 int	my_str_isupper(char *str);
+
 char	*my_revstr(char *str);
 char	*my_strupcase(char *str);
 char	*my_strcapitalize(char *str);
@@ -55,11 +62,14 @@ void	my_putchar_fd(int fd, char c);
 int	my_putstr_fd(int fd, char *str);
 int	my_fprintf(int fd, const char *format, ...);
 void	my_putchar_hex(char c, char *hex_digits);
+
 int	my_showmem(char *str, int size);
 int	my_showstr(char *str);
+
 char	**my_str_to_wordtab(char *str);
 int	my_show_wordtab(char **tab);
 void	my_sort_int_tab(int *arr, int size);
+
 int	my_strlen(char *str);
 int	my_strcmp(char *s1, char *s2);
 int	my_strcmp_uncase(char *s1, char *s2);
@@ -71,10 +81,18 @@ char	*my_strncpy(char *dest, char *src, int n);
 char	*my_strdup(char *src);
 char	*my_strchr(char *str, char to_find);
 char	*my_strstr(char *str, char *to_find);
+
 int	my_swap(int *a, int *b);
 int	my_swap_char(char *a, char *b);
 int	my_swap_str(char **a, char **b);
+
 char	*my_read_file(int fd);
 char	*my_read_file_bin(int fd, int *size);
+
+t_iobuf		*my_iobuf_init(int fd);
+void		my_iobuf_free(t_iobuf *iobuf);
+void		my_iobuf_flush(t_iobuf *iobuf);
+void		my_iobuf_putchar(t_iobuf *iobuf, char c);
+void		my_iobuf_putstr(t_iobuf *iobuf, char *str);
 
 #endif

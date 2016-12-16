@@ -14,6 +14,7 @@ SRC		=	my_die.c		\
 			my_find_prime_sup.c	\
 			my_getnbr_base.c	\
 			my_getnbr.c		\
+			my_iobuf.c		\
 			my_isalnum.c		\
 			my_isalpha.c		\
 			my_islower.c		\
@@ -72,6 +73,7 @@ SRC		=	my_die.c		\
 			my_strupcase.c		\
 			my_swap.c
 INC		=	my.h			\
+			my_iobuf.h		\
 			my_printf.h
 OBJ		=	$(SRC:.c=.o)
 
