@@ -11,6 +11,8 @@
 #ifndef MY_IOBUF_H_
 # define MY_IOBUF_H_
 
+# define IOBUF_SZ 65536
+
 typedef struct	s_iobuf
 {
   char		*buf;

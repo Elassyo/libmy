@@ -19,7 +19,7 @@ t_iobuf		*my_iobuf_init(int fd)
 
   if (!(iobuf = malloc(sizeof(t_iobuf))))
     return (NULL);
-  iobuf->size = getpagesize();
+  iobuf->size = IOBUF_SZ;
   if (!(iobuf->buf = malloc(iobuf->size)))
     {
       free(iobuf);
