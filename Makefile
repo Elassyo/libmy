@@ -85,7 +85,7 @@ DIST_INC	=	my.h
 DIST_INCDIR	=	../../include
 
 CC		=	gcc
-CFLAGS		=	-c -O3 -W -Wall -Wextra
+CFLAGS		=	-c -O2 -W -Wall -Wextra
 AR		=	ar -rc
 CP		=	cp
 MKDIR		=	mkdir -p
