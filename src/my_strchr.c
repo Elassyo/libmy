@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Wed Dec  7 13:49:53 2016 Arthur Melin
-** Last update Wed Dec  7 13:54:19 2016 Arthur Melin
+** Last update Sun Dec 18 12:45:02 2016 Arthur Melin
 */
 
 #include <stdlib.h>
@@ -13,10 +13,12 @@
 
 char	*my_strchr(char *str, char c)
 {
-  while (*str)
+  while (1)
     {
       if (*str == c)
 	return (str);
+      if (!*str)
+	return (NULL);
       str++;
     }
   return (NULL);
