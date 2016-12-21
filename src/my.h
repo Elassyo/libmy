@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Fri Dec 16 16:21:20 2016 Arthur Melin
+** Last update Wed Dec 21 13:26:09 2016 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -23,6 +23,7 @@
 typedef struct s_iobuf t_iobuf;
 
 int	my_die(char *err_msg);
+void	*my_die_null(char *err_msg);
 
 long	my_power_ite(int nbr, int power);
 int	my_power_rec(int nbr, int power);

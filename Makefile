@@ -5,12 +5,13 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Wed Dec 14 12:31:51 2016 Arthur Melin
+## Last update Wed Dec 21 13:25:50 2016 Arthur Melin
 ##
 
 NAME		=	libmy.a
 
 SRC		=	my_die.c		\
+			my_die_null.c		\
 			my_find_prime_sup.c	\
 			my_getnbr_base.c	\
 			my_getnbr.c		\
