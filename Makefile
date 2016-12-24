@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Wed Dec 21 13:25:50 2016 Arthur Melin
+## Last update Sat Dec 24 00:57:56 2016 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -26,6 +26,7 @@ SRC		=	my_die.c		\
 			my_issign.c		\
 			my_isupper.c		\
 			my_math.c		\
+			my_memcmp.c		\
 			my_memcpy.c		\
 			my_memset.c		\
 			my_power_ite.c		\
