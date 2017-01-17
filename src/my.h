@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Sat Dec 24 00:58:54 2016 Arthur Melin
+** Last update Tue Jan 17 23:24:29 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -14,7 +14,9 @@
 # define MY_ABS(x) (x < 0 ? -x : x)
 # define MY_MIN(a, b) (a < b ? a : b)
 # define MY_MAX(a, b) (a > b ? a : b)
+# define MY_CLAMP(v, l, h) (l > v ? l : v < h ? v : h)
 
+# define my_die(err) my_die_n(err, 84)
 # define my_putchar(c) my_putchar_fd(1, c)
 # define my_putstr(str) my_putstr_fd(1, str)
 # define my_puterr(str) my_putstr_fd(2, str)
@@ -22,7 +24,7 @@
 
 typedef struct s_iobuf t_iobuf;
 
-int	my_die(char *err_msg);
+int	my_die_n(char *err_msg, int n);
 void	*my_die_null(char *err_msg);
 
 long	my_power_ite(int nbr, int power);

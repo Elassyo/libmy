@@ -5,13 +5,13 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Wed Dec  7 21:30:22 2016 Arthur Melin
-** Last update Wed Dec  7 21:31:23 2016 Arthur Melin
+** Last update Tue Jan 17 23:24:43 2017 Arthur Melin
 */
 
 #include  "my.h"
 
-int	my_die(char *err_msg)
+int	my_die_n(char *err_msg, int n)
 {
   my_puterr(err_msg);
-  return (84);
+  return (n);
 }
