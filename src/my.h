@@ -5,11 +5,15 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Tue Jan 17 23:24:29 2017 Arthur Melin
+** Last update Wed Jan 18 14:07:11 2017 Arthur Melin
 */
 
 #ifndef MY_H_
 # define MY_H_
+
+# ifndef GNL_READ_SIZE
+#  define GNL_READ_SIZE 4096
+# endif /* !GNL_READ_SIZE */
 
 # define MY_ABS(x) (x < 0 ? -x : x)
 # define MY_MIN(a, b) (a < b ? a : b)
@@ -92,13 +96,14 @@ int	my_swap(int *a, int *b);
 int	my_swap_char(char *a, char *b);
 int	my_swap_str(char **a, char **b);
 
+char	*my_get_next_line(int fd);
 char	*my_read_file(int fd);
 char	*my_read_file_bin(int fd, int *size);
 
 t_iobuf		*my_iobuf_init(int fd);
-void		my_iobuf_free(t_iobuf *iobuf);
-void		my_iobuf_flush(t_iobuf *iobuf);
-void		my_iobuf_putchar(t_iobuf *iobuf, char c);
-void		my_iobuf_putstr(t_iobuf *iobuf, char *str);
+void	my_iobuf_free(t_iobuf *iobuf);
+void	my_iobuf_flush(t_iobuf *iobuf);
+void	my_iobuf_putchar(t_iobuf *iobuf, char c);
+void	my_iobuf_putstr(t_iobuf *iobuf, char *str);
 
 #endif

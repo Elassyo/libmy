@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Sat Dec 24 00:57:56 2016 Arthur Melin
+## Last update Wed Jan 18 14:07:36 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -15,6 +15,7 @@ SRC		=	my_die.c		\
 			my_find_prime_sup.c	\
 			my_getnbr_base.c	\
 			my_getnbr.c		\
+			my_get_next_line.c	\
 			my_iobuf.c		\
 			my_isalnum.c		\
 			my_isalpha.c		\
