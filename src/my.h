@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Wed Jan 18 14:07:11 2017 Arthur Melin
+** Last update Thu Jan 19 16:05:43 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -77,6 +77,7 @@ int	my_showmem(char *str, int size);
 int	my_showstr(char *str);
 
 char	**my_str_to_wordtab(char *str);
+int	my_word_tab_len(char **tab);
 int	my_show_wordtab(char **tab);
 void	my_sort_int_tab(int *arr, int size);
 
