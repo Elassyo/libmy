@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Thu Jan 19 16:06:22 2017 Arthur Melin
+## Last update Thu Jan 19 16:14:47 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -13,6 +13,7 @@ NAME		=	libmy.a
 SRC		=	my_die.c		\
 			my_die_null.c		\
 			my_find_prime_sup.c	\
+			my_free_wordtab.c	\
 			my_getnbr_base.c	\
 			my_getnbr.c		\
 			my_get_next_line.c	\
@@ -75,7 +76,7 @@ SRC		=	my_die.c		\
 			my_str_to_wordtab.c	\
 			my_strupcase.c		\
 			my_swap.c		\
-			my_word_tab_len.c
+			my_wordtab_len.c
 INC		=	my.h			\
 			my_iobuf.h		\
 			my_printf.h
