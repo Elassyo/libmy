@@ -26,7 +26,7 @@
 # define my_puterr(str) my_putstr_fd(2, str)
 # define my_printf(...) my_fprintf(1, __VA_ARGS__)
 
-typedef struct s_iobuf t_iobuf;
+typedef struct s_iobuf	t_iobuf;
 
 int	my_die_n(char *err_msg, int n);
 void	*my_die_null(char *err_msg);
@@ -108,4 +108,4 @@ void	my_iobuf_flush(t_iobuf *iobuf);
 void	my_iobuf_putchar(t_iobuf *iobuf, char c);
 void	my_iobuf_putstr(t_iobuf *iobuf, char *str);
 
-#endif
+#endif /* !MY_H_ */
