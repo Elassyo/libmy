@@ -1,18 +1,18 @@
 /*
-** my_get_next_line.c for libmy in /home/arthur.melin/Code/libmy/src
+** my_read_line.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Wed Jan 18 13:56:33 2017 Arthur Melin
-** Last update Wed Jan 18 14:05:09 2017 Arthur Melin
+** Last update Thu Feb  9 17:53:41 2017 Arthur Melin
 */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "my.h"
 
-static int	gnl_linelen(const char *s, int n)
+static int	my_linelen(const char *s, int n)
 {
   int		i;
 
@@ -23,7 +23,7 @@ static int	gnl_linelen(const char *s, int n)
   return (-1);
 }
 
-static char	*gnl_strrealloc(char *src, int old_sz, int new_sz)
+static char	*my_strrealloc(char *src, int old_sz, int new_sz)
 {
   char		*buf;
 
@@ -34,14 +34,14 @@ static char	*gnl_strrealloc(char *src, int old_sz, int new_sz)
   return (buf);
 }
 
-static char	*gnl_loop(int fd, char *buf, int *buf_sz)
+static char	*read_line_loop(int fd, char *buf, int *buf_sz)
 {
   int		read_sz;
 
-  while (gnl_linelen(buf, *buf_sz) < 0)
+  while (my_linelen(buf, *buf_sz) < 0)
     {
-      if (!(buf = gnl_strrealloc(buf, *buf_sz, *buf_sz + GNL_READ_SIZE)) ||
-	  (read_sz = read(fd, buf + *buf_sz, GNL_READ_SIZE)) == -1)
+      if (!(buf = my_strrealloc(buf, *buf_sz, *buf_sz + 4096)) ||
+	  (read_sz = read(fd, buf + *buf_sz, 4096)) == -1)
 	return (NULL);
       if (read_sz == 0)
 	{
@@ -57,11 +57,11 @@ static char	*gnl_loop(int fd, char *buf, int *buf_sz)
   return (buf);
 }
 
-char		*my_get_next_line(int fd)
+char		*my_read_line(int fd)
 {
   char		*buf;
   int		buf_sz;
-  static char	st_buf[GNL_READ_SIZE];
+  static char	st_buf[4096];
   static int	st_buf_sz = 0;
 
   buf = NULL;
@@ -71,10 +71,10 @@ char		*my_get_next_line(int fd)
 	return (NULL);
       my_strncpy(buf, st_buf, st_buf_sz);
     }
-  if (!(buf = gnl_loop(fd, buf, &buf_sz)))
+  if (!(buf = read_line_loop(fd, buf, &buf_sz)))
     return (NULL);
-  st_buf_sz = buf_sz - (gnl_linelen(buf, buf_sz) + 1);
-  my_strncpy(st_buf, buf + gnl_linelen(buf, buf_sz) + 1, st_buf_sz);
-  buf[gnl_linelen(buf, buf_sz)] = 0;
+  st_buf_sz = buf_sz - (my_linelen(buf, buf_sz) + 1);
+  my_strncpy(st_buf, buf + my_linelen(buf, buf_sz) + 1, st_buf_sz);
+  buf[my_linelen(buf, buf_sz)] = 0;
   return (buf);
 }

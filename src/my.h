@@ -1,19 +1,15 @@
 /*
-** my.h for libmy in /home/arthur.melin/Code/__libmy
+** my.h for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Thu Jan 19 16:12:51 2017 Arthur Melin
+** Last update Thu Feb  9 17:59:06 2017 Arthur Melin
 */
 
 #ifndef MY_H_
 # define MY_H_
-
-# ifndef GNL_READ_SIZE
-#  define GNL_READ_SIZE 4096
-# endif /* !GNL_READ_SIZE */
 
 # define MY_ABS(x) (x < 0 ? -x : x)
 # define MY_MIN(a, b) (a < b ? a : b)
@@ -98,9 +94,9 @@ int	my_swap(int *a, int *b);
 int	my_swap_char(char *a, char *b);
 int	my_swap_str(char **a, char **b);
 
-char	*my_get_next_line(int fd);
 char	*my_read_file(int fd);
 char	*my_read_file_bin(int fd, int *size);
+char	*my_read_line(int fd);
 
 t_iobuf		*my_iobuf_init(int fd);
 void	my_iobuf_free(t_iobuf *iobuf);

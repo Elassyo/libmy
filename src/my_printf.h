@@ -1,5 +1,5 @@
 /*
-** my_printf.h for PSU_2016_my_printf in /home/arthur.melin/Code/__libmy/src
+** my_printf.h for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>

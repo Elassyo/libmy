@@ -1,5 +1,5 @@
 /*
-** my_strncat.c for libmy in /home/arthur.melin/Code/__libmy/src
+** my_strncat.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
