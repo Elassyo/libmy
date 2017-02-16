@@ -8,7 +8,6 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-
 #include <stdlib.h>
 #include "my.h"
 

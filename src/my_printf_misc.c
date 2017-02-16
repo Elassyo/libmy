@@ -10,7 +10,8 @@
 
 #include "my_printf.h"
 
-int		my_printf_ptr(t_printf_fmt *fmt, va_list *args, int *written)
+int			my_printf_ptr(t_printf_fmt *fmt, va_list *args,
+				      int *written)
 {
   uintmax_t		ptr;
   t_printf_base_fmt	base_fmt;
