@@ -5,12 +5,12 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Thu Feb  9 17:54:40 2017 Arthur Melin
+## Last update Sun Feb 19 23:08:39 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
 
-SRC		=	my_die.c		\
+SRC		=	my_die_n.c		\
 			my_die_null.c		\
 			my_find_prime_sup.c	\
 			my_free_wordtab.c	\
@@ -26,7 +26,6 @@ SRC		=	my_die.c		\
 			my_isprintable.c	\
 			my_issign.c		\
 			my_isupper.c		\
-			my_math.c		\
 			my_memcmp.c		\
 			my_memcpy.c		\
 			my_memset.c		\
@@ -44,6 +43,7 @@ SRC		=	my_die.c		\
 			my_putchar_fd.c		\
 			my_putchar_hex.c	\
 			my_putnbr_base.c	\
+			my_putnchar_fd.c	\
 			my_putstr_fd.c		\
 			my_read_file.c		\
 			my_read_file_bin.c	\

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Thu Feb  9 17:59:06 2017 Arthur Melin
+** Last update Sun Feb 19 23:01:46 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -18,6 +18,7 @@
 
 # define my_die(err) my_die_n(err, 84)
 # define my_putchar(c) my_putchar_fd(1, c)
+# define my_putnchar(c, n) my_putnchar_fd(1, c, n)
 # define my_putstr(str) my_putstr_fd(1, str)
 # define my_puterr(str) my_putstr_fd(2, str)
 # define my_printf(...) my_fprintf(1, __VA_ARGS__)
@@ -30,7 +31,6 @@ void	*my_die_null(char *err_msg);
 long	my_power_ite(int nbr, int power);
 int	my_power_rec(int nbr, int power);
 int	my_square_root(int nbr);
-int	my_abs(int nbr);
 int	my_isneg(int nbr);
 int	my_is_prime(int nbr);
 int	my_find_prime_sup(int nbr);
@@ -65,8 +65,8 @@ void	*my_realloc(void *old_buf, int old_sz, int new_sz, int elm_sz);
 
 int	my_fprintf(int fd, const char *format, ...);
 void	my_putchar_fd(int fd, char c);
-int	my_putstr_fd(int fd, char *str);
-int	my_fprintf(int fd, const char *format, ...);
+void	my_putnchar_fd(int fd, char c, int n);
+void	my_putstr_fd(int fd, char *str);
 void	my_putchar_hex(char c, char *hex_digits);
 
 int	my_showmem(char *str, int size);

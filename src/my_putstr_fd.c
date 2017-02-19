@@ -1,5 +1,5 @@
 /*
-** my_putstr.c for libmy in /home/arthur.melin/Code/libmy
+** my_putstr_fd.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -11,8 +11,7 @@
 #include <unistd.h>
 #include "my.h"
 
-int	my_putstr_fd(int fd, char *str)
+void	my_putstr_fd(int fd, char *str)
 {
   write(fd, str, my_strlen(str));
-  return (0);
 }

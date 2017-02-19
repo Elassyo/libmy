@@ -21,7 +21,8 @@ int	my_power_rec(int nbr, int p)
   if (p == 1)
     return (nbr);
   prev = my_power_rec(nbr, p - 1);
-  if ((-2147483648 / my_abs(nbr)) > prev || prev > (2147483647 / my_abs(nbr)))
+  if (-2147483648 / MY_ABS(nbr) > prev ||
+      prev > 2147483647 / MY_ABS(nbr))
     return (0);
   return (nbr * prev);
 }
