@@ -15,6 +15,9 @@
 # define MY_MIN(a, b) (a < b ? a : b)
 # define MY_MAX(a, b) (a > b ? a : b)
 # define MY_CLAMP(v, l, h) (l > v ? l : v < h ? v : h)
+# define MY_STR(v) #v
+# define MY_STR_MACRO(m) MY_STR(m)
+# define MY_ASSERT(str) __FILE__ ":" MY_STR_MACRO(__LINE__) ": " str
 
 # define my_die(err) my_die_n(err, 84)
 # define my_putchar(c) my_putchar_fd(1, c)
