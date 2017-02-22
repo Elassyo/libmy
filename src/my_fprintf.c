@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 21:13:23 2016 Arthur Melin
-** Last update Thu Nov 17 00:28:50 2016 Arthur Melin
+** Last update Wed Feb 22 11:44:47 2017 Arthur Melin
 */
 
 #include "my.h"
@@ -49,7 +49,7 @@ static int		my_fprintf_do(int fd, const char *str,
       if (func_map[i].chr == fmt.specifier)
       	{
       	  i = func_map[i].func(fd, &fmt, args, written);
-      	  return (i ? 0 : str_start - str);
+      	  return (i ? 0 : str - str_start);
       	}
       i++;
     }
