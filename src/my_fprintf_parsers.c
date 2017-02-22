@@ -1,5 +1,5 @@
 /*
-** my_printf_parsers.c for libmy in /home/arthur.melin/Code/libmy
+** my_fprintf_parsers.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -8,9 +8,9 @@
 ** Last update Tue Nov 15 20:39:09 2016 Arthur Melin
 */
 
-#include "my_printf.h"
+#include "my_fprintf.h"
 
-void	my_printf_parse_flags(t_printf_fmt *fmt, const char **str)
+void	my_fprintf_parse_flags(t_fprintf_fmt *fmt, const char **str)
 {
   int	cont;
 
@@ -34,8 +34,8 @@ void	my_printf_parse_flags(t_printf_fmt *fmt, const char **str)
     }
 }
 
-void	my_printf_parse_width(t_printf_fmt *fmt, const char **str,
-			      va_list *args)
+void	my_fprintf_parse_width(t_fprintf_fmt *fmt, const char **str,
+			       va_list *args)
 {
   if (**str == '*')
     {
@@ -53,8 +53,8 @@ void	my_printf_parse_width(t_printf_fmt *fmt, const char **str,
     }
 }
 
-void	my_printf_parse_precision(t_printf_fmt *fmt, const char **str,
-				  va_list *args)
+void	my_fprintf_parse_prec(t_fprintf_fmt *fmt, const char **str,
+			      va_list *args)
 {
   if (**str == '.')
     {
@@ -78,7 +78,7 @@ void	my_printf_parse_precision(t_printf_fmt *fmt, const char **str,
     fmt->precision = -1;
 }
 
-void	my_printf_parse_length(t_printf_fmt *fmt, const char **str)
+void	my_fprintf_parse_length(t_fprintf_fmt *fmt, const char **str)
 {
   if (**str == 'h' && *(*str + 1) == 'h')
     {

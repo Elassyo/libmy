@@ -1,5 +1,5 @@
 /*
-** my_printf.c for libmy in /home/arthur.melin/Code/libmy
+** my_fprintf.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -9,9 +9,9 @@
 */
 
 #include "my.h"
-#include "my_printf.h"
+#include "my_fprintf.h"
 
-uintmax_t	my_printf_arg_mask(int length_modifier)
+uintmax_t	my_fprintf_arg_mask(int length_modifier)
 {
   uintmax_t	mask;
 
@@ -26,29 +26,31 @@ uintmax_t	my_printf_arg_mask(int length_modifier)
   return (mask);
 }
 
-static int		my_printf_do(int fd, const char *str,
-                        	     va_list *args, int *written)
+static int		my_fprintf_do(int fd, const char *str,
+				      va_list *args, int *written)
 {
   const char		*str_start;
   int			i;
-  t_printf_fmt		fmt;
-  t_printf_func_map	func_map[14];
+  t_fprintf_fmt		fmt;
+  t_fprintf_func_map	func_map[14];
 
   str_start = str;
   str++;
   my_memset(&fmt, 0, sizeof(fmt));
-  fmt.fd = fd;
-  my_printf_parse_flags(&fmt, &str);
-  my_printf_parse_width(&fmt, &str, args);
-  my_printf_parse_precision(&fmt, &str, args);
-  my_printf_parse_length(&fmt, &str);
+  my_fprintf_parse_flags(&fmt, &str);
+  my_fprintf_parse_width(&fmt, &str, args);
+  my_fprintf_parse_prec(&fmt, &str, args);
+  my_fprintf_parse_length(&fmt, &str);
   fmt.specifier = *str++;
-  my_printf_func_map_fill(func_map);
+  my_fprintf_func_map_fill(func_map);
   i = 0;
   while (i < 14)
     {
       if (func_map[i].chr == fmt.specifier)
-	return (func_map[i].func(&fmt, args, written) ? 0 : str - str_start);
+      	{
+      	  i = func_map[i].func(fd, &fmt, args, written);
+      	  return (i ? 0 : str_start - str);
+      	}
       i++;
     }
   return (0);
@@ -67,7 +69,8 @@ int		my_fprintf(int fd, const char *format, ...)
   while (*format)
     {
       off = 0;
-      if (*format != '%' || !(off = my_printf_do(fd, format, &args, &written)))
+      if (*format != '%' ||
+	  !(off = my_fprintf_do(fd, format, &args, &written)))
 	{
 	  my_putchar_fd(fd, *format);
 	  off = 1;

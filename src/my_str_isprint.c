@@ -1,5 +1,5 @@
 /*
-** my_str_isprintable.c for libmy in /home/arthur.melin/Code/libmy
+** my_str_isprint.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -10,14 +10,14 @@
 
 #include "my.h"
 
-int	my_str_isprintable(char *str)
+int	my_str_isprint(char *str)
 {
   int	ret;
 
   ret = 1;
   while (*str)
     {
-      if (!my_isprintable(*str++))
+      if (!my_isprint(*str++))
 	ret = 0;
     }
   return (ret);

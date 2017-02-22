@@ -1,5 +1,5 @@
 /*
-** my_put_nbr.c for libmy in /home/arthur.melin/Code/libmy
+** my_putnbr.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -10,7 +10,7 @@
 
 #include "my.h"
 
-int	my_put_nbr(int nbr)
+int	my_putnbr(int nbr)
 {
   int	i;
 

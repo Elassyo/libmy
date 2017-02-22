@@ -1,5 +1,5 @@
 /*
-** my_putchar_hex.c for libmy in /home/arthur.melin/Code/libmy
+** my_isprint.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -10,8 +10,7 @@
 
 #include "my.h"
 
-void	my_putchar_hex(char c, char *hex_digits)
+int	my_isprint(char c)
 {
-  my_putchar(hex_digits[(c >> 4) & 0xF]);
-  my_putchar(hex_digits[c & 0xF]);
+  return (' ' <= c && c <= '~');
 }
