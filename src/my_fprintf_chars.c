@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Wed Nov 16 10:59:23 2016 Arthur Melin
-** Last update Wed Feb 22 01:09:03 2017 Arthur Melin
+** Last update Mon Feb 27 15:07:04 2017 Arthur Melin
 */
 
 #include "my_fprintf.h"
@@ -92,17 +92,5 @@ int	my_fprintf_str_np(int fd, t_fprintf_fmt *fmt,
   while (fmt->flag_ljust && written < fmt->field_width && ++written)
     my_putchar_fd(fd, ' ');
   *written_ptr += written;
-  return (0);
-}
-
-int	my_fprintf_err(int fd, t_fprintf_fmt *fmt,
-		       va_list *args, int *written_ptr){
-  char	*err_msg;
-
-  (void)fmt;
-  (void)args;
-  err_msg = strerror(errno);
-  *written_ptr += my_strlen(err_msg);
-  my_putstr_fd(fd, err_msg);
   return (0);
 }

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 21:13:23 2016 Arthur Melin
-** Last update Wed Feb 22 11:44:47 2017 Arthur Melin
+** Last update Mon Feb 27 15:07:16 2017 Arthur Melin
 */
 
 #include "my.h"
@@ -32,7 +32,7 @@ static int		my_fprintf_do(int fd, const char *str,
   const char		*str_start;
   int			i;
   t_fprintf_fmt		fmt;
-  t_fprintf_func_map	func_map[14];
+  t_fprintf_func_map	func_map[13];
 
   str_start = str;
   str++;

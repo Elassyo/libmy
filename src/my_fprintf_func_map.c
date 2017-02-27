@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov 14 17:03:51 2016 Arthur Melin
-** Last update Mon Nov 14 21:42:12 2016 Arthur Melin
+** Last update Mon Feb 27 15:07:45 2017 Arthur Melin
 */
 
 #include "my_fprintf.h"
@@ -35,5 +35,4 @@ void	my_fprintf_func_map_fill(t_fprintf_func_map *map)
   my_fprintf_func_map_put(map, i++, 'p', my_fprintf_ptr);
   my_fprintf_func_map_put(map, i++, 'n', my_fprintf_wrt);
   my_fprintf_func_map_put(map, i++, '%', my_fprintf_pct);
-  my_fprintf_func_map_put(map, i++, 'm', my_fprintf_err);
 }

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 22:14:18 2016 Arthur Melin
-** Last update Wed Feb 22 01:10:59 2017 Arthur Melin
+** Last update Mon Feb 27 15:07:56 2017 Arthur Melin
 */
 
 #ifndef MY_FPRINTF_H_
@@ -70,6 +70,5 @@ t_fprintf_func	my_fprintf_str_np;
 t_fprintf_func	my_fprintf_ptr;
 t_fprintf_func	my_fprintf_wrt;
 t_fprintf_func	my_fprintf_pct;
-t_fprintf_func	my_fprintf_err;
 
 #endif /* !MY_FPRINTF_H_ */
