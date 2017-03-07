@@ -11,14 +11,16 @@
 #ifndef MY_IOBUF_H_
 # define MY_IOBUF_H_
 
+# include "my.h"
+
 # define IOBUF_SZ 65536
 
-typedef struct	s_iobuf
+struct	s_iobuf
 {
   char		*buf;
   int		fd;
   int		off;
   int		size;
-}		t_iobuf;
+};
 
 #endif /* !IOBUF_H_ */

@@ -5,11 +5,14 @@
 ** Login   <arthur.melin@epitech.net>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Sun Feb 19 23:01:46 2017 Arthur Melin
+** Last update Tue Mar  7 11:04:12 2017 Arthur Melin
 */
 
 #ifndef MY_H_
 # define MY_H_
+
+# include <stdarg.h>
+# include <unistd.h>
 
 /*
 ** LIBMY
@@ -35,11 +38,10 @@
 ** Shorthand macros with commonly used parameters
 */
 # define my_die(err) my_die_n(err, 84)
-# define my_putchar(c) my_putchar_fd(1, c)
-# define my_putnchar(c, n) my_putnchar_fd(1, c, n)
-# define my_putstr(str) my_putstr_fd(1, str)
-# define my_puterr(str) my_putstr_fd(2, str)
-# define my_printf(...) my_fprintf(1, __VA_ARGS__)
+# define my_putchar(c) my_putchar_fd(STDOUT_FILENO, c)
+# define my_putnchar(c, n) my_putnchar_fd(STDOUT_FILENO, c, n)
+# define my_putstr(str) my_putstr_fd(STDOUT_FILENO, str)
+# define my_puterr(str) my_putstr_fd(STDERR_FILENO, str)
 
 /*
 ** Multiline macros as functions (aka norme dodging)
@@ -50,7 +52,9 @@ void	*my_die_null(char *err_msg);
 /*
 ** Formatted and unformatted text output
 */
+int	my_printf(const char *format, ...);
 int	my_fprintf(int fd, const char *format, ...);
+int	my_vfprintf(int fd, const char *format, va_list *va);
 void	my_putchar_fd(int fd, char c);
 void	my_putnchar_fd(int fd, char c, int n);
 void	my_putstr_fd(int fd, char *str);
@@ -142,7 +146,7 @@ void	*my_memset(void *ptr, int c, int size);
 void	*my_realloc(void *old_buf, int old_sz, int new_sz, int elm_sz);
 
 /*
-** Swap functions 
+** Swap functions
 ** TODO: create multi-purpose version and replace those with shorthand macros
 */
 int	my_swap(int *a, int *b);

@@ -1,5 +1,5 @@
 /*
-** my_fprintf_parsers.c for libmy in /home/arthur.melin/Code/libmy
+** my_vfprintf_parsers.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -8,9 +8,9 @@
 ** Last update Tue Nov 15 20:39:09 2016 Arthur Melin
 */
 
-#include "my_fprintf.h"
+#include "my_vfprintf.h"
 
-void	my_fprintf_parse_flags(t_fprintf_fmt *fmt, const char **str)
+void	my_vfprintf_parse_flags(t_vfprintf_fmt *fmt, const char **str)
 {
   int	cont;
 
@@ -34,7 +34,7 @@ void	my_fprintf_parse_flags(t_fprintf_fmt *fmt, const char **str)
     }
 }
 
-void	my_fprintf_parse_width(t_fprintf_fmt *fmt, const char **str,
+void	my_vfprintf_parse_width(t_vfprintf_fmt *fmt, const char **str,
 			       va_list *args)
 {
   if (**str == '*')
@@ -53,7 +53,7 @@ void	my_fprintf_parse_width(t_fprintf_fmt *fmt, const char **str,
     }
 }
 
-void	my_fprintf_parse_prec(t_fprintf_fmt *fmt, const char **str,
+void	my_vfprintf_parse_prec(t_vfprintf_fmt *fmt, const char **str,
 			      va_list *args)
 {
   if (**str == '.')
@@ -78,7 +78,7 @@ void	my_fprintf_parse_prec(t_fprintf_fmt *fmt, const char **str,
     fmt->precision = -1;
 }
 
-void	my_fprintf_parse_length(t_fprintf_fmt *fmt, const char **str)
+void	my_vfprintf_parse_length(t_vfprintf_fmt *fmt, const char **str)
 {
   if (**str == 'h' && *(*str + 1) == 'h')
     {
@@ -87,7 +87,7 @@ void	my_fprintf_parse_length(t_fprintf_fmt *fmt, const char **str)
     }
   else if ((**str == 'l' && *(*str + 1) == 'l') || **str == 'L')
     {
-      fmt->length_modifier = sizeof(long long);
+      fmt->length_modifier = sizeof(long);
       *str += (**str == 'l' ? 1 : 0);
     }
   else if (**str == 'h')

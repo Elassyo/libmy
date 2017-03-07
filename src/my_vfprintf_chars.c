@@ -1,5 +1,5 @@
 /*
-** my_fprintf_chars.c for libmy in /home/arthur.melin/Code/libmy
+** my_vfprintf_chars.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -8,7 +8,7 @@
 ** Last update Mon Feb 27 15:07:04 2017 Arthur Melin
 */
 
-#include "my_fprintf.h"
+#include "my_vfprintf.h"
 
 static int	my_strlen_np(char *str)
 {
@@ -23,7 +23,7 @@ static int	my_strlen_np(char *str)
   return (length);
 }
 
-int	my_fprintf_chr(int fd, t_fprintf_fmt *fmt,
+int	my_vfprintf_chr(int fd, t_vfprintf_fmt *fmt,
 		       va_list *args, int *written_ptr)
 {
   int	written;
@@ -42,7 +42,7 @@ int	my_fprintf_chr(int fd, t_fprintf_fmt *fmt,
   return (0);
 }
 
-int	my_fprintf_str(int fd, t_fprintf_fmt *fmt,
+int	my_vfprintf_str(int fd, t_vfprintf_fmt *fmt,
 		       va_list *args, int *written_ptr)
 {
   char	*str;
@@ -66,7 +66,7 @@ int	my_fprintf_str(int fd, t_fprintf_fmt *fmt,
   return (0);
 }
 
-int	my_fprintf_str_np(int fd, t_fprintf_fmt *fmt,
+int	my_vfprintf_str_np(int fd, t_vfprintf_fmt *fmt,
 			  va_list *args, int *written_ptr)
 {
   char	*str;

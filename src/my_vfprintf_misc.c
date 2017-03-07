@@ -1,5 +1,5 @@
 /*
-** my_fprintf_misc.c for libmy in /home/arthur.melin/Code/libmy
+** my_vfprintf_misc.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -8,13 +8,13 @@
 ** Last update Thu Nov 17 00:34:33 2016 Arthur Melin
 */
 
-#include "my_fprintf.h"
+#include "my_vfprintf.h"
 
-int			my_fprintf_ptr(int fd, t_fprintf_fmt *fmt,
+int			my_vfprintf_ptr(int fd, t_vfprintf_fmt *fmt,
 				       va_list *args, int *written_ptr)
 {
   uintmax_t		ptr;
-  t_fprintf_nbr_fmt	nbr_fmt;
+  t_vfprintf_nbr_fmt	nbr_fmt;
 
   ptr = va_arg(*args, uintmax_t);
   nbr_fmt.fmt = fmt;
@@ -31,11 +31,11 @@ int			my_fprintf_ptr(int fd, t_fprintf_fmt *fmt,
   else
     nbr_fmt.prefix = "0x";
   fmt->flag_hash = 1;
-  return (my_fprintf_nbr(fd, &nbr_fmt, ptr, written_ptr));
+  return (my_vfprintf_nbr(fd, &nbr_fmt, ptr, written_ptr));
 }
 
-int		my_fprintf_wrt(int fd __attribute__ ((__unused__)),
-			       t_fprintf_fmt *fmt, va_list *args,
+int		my_vfprintf_wrt(int fd __attribute__ ((__unused__)),
+			       t_vfprintf_fmt *fmt, va_list *args,
 			       int *written_ptr)
 {
   intmax_t	written;
@@ -51,8 +51,8 @@ int		my_fprintf_wrt(int fd __attribute__ ((__unused__)),
   return (0);
 }
 
-int		my_fprintf_pct(int fd,
-			       t_fprintf_fmt *fmt __attribute__ ((__unused__)),
+int		my_vfprintf_pct(int fd,
+			       t_vfprintf_fmt *fmt __attribute__ ((__unused__)),
 			       va_list *args __attribute__ ((__unused__)),
 			       int *written_ptr)
 {

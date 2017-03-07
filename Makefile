@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Sun Feb 19 23:08:39 2017 Arthur Melin
+## Last update Tue Mar  7 11:35:17 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -14,13 +14,6 @@ SRC		=	my_die_n.c		\
 			my_die_null.c		\
 			my_find_prime_sup.c	\
 			my_fprintf.c		\
-			my_fprintf_chars.c	\
-			my_fprintf_func_map.c	\
-			my_fprintf_misc.c	\
-			my_fprintf_nbr.c	\
-			my_fprintf_nbr_bases.c	\
-			my_fprintf_nbr_dec.c	\
-			my_fprintf_parsers.c	\
 			my_free_wordtab.c	\
 			my_getnbr.c		\
 			my_getnbr_base.c	\
@@ -39,6 +32,7 @@ SRC		=	my_die_n.c		\
 			my_memset.c		\
 			my_power_ite.c		\
 			my_power_rec.c		\
+			my_printf.c		\
 			my_putchar_fd.c		\
 			my_putnbr.c		\
 			my_putnbr_base.c	\
@@ -73,10 +67,18 @@ SRC		=	my_die_n.c		\
 			my_strstr.c		\
 			my_strupcase.c		\
 			my_swap.c		\
+			my_vfprintf.c		\
+			my_vfprintf_chars.c	\
+			my_vfprintf_func_map.c	\
+			my_vfprintf_misc.c	\
+			my_vfprintf_nbr.c	\
+			my_vfprintf_nbr_bases.c	\
+			my_vfprintf_nbr_dec.c	\
+			my_vfprintf_parsers.c	\
 			my_wordtab_len.c
 INC		=	my.h			\
-			my_fprintf.h		\
-			my_iobuf.h
+			my_iobuf.h		\
+			my_vfprintf.h
 OBJ		=	$(SRC:.c=.o)
 
 SRCDIR		=	src
@@ -87,7 +89,7 @@ DIST_INC	=	my.h
 DIST_INCDIR	=	../../include
 
 CC		=	gcc
-CFLAGS		=	-c -O2 -W -Wall -Wextra
+CFLAGS		=	-c -O2 -W -Wall -Wextra -std=c89 -pedantic
 AR		=	ar -rc
 CP		=	cp
 MKDIR		=	mkdir -p

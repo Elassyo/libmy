@@ -1,5 +1,5 @@
 /*
-** my_fprintf_nbr.c for libmy in /home/arthur.melin/Code/libmy
+** my_vfprintf_nbr.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.net>
@@ -8,9 +8,9 @@
 ** Last update Thu Nov 17 00:33:25 2016 Arthur Melin
 */
 
-#include "my_fprintf.h"
+#include "my_vfprintf.h"
 
-int		my_fprintf_nbr_length(t_fprintf_fmt *fmt, uintmax_t nbr,
+int		my_vfprintf_nbr_length(t_vfprintf_fmt *fmt, uintmax_t nbr,
 				      int base_length)
 {
   int		length;
@@ -26,7 +26,7 @@ int		my_fprintf_nbr_length(t_fprintf_fmt *fmt, uintmax_t nbr,
   return (length);
 }
 
-int	my_fprintf_nbr_digits(int fd, t_fprintf_nbr_fmt *nbr_fmt,
+int	my_vfprintf_nbr_digits(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
 			      uintmax_t nbr, int written)
 {
   int	len;
@@ -34,7 +34,7 @@ int	my_fprintf_nbr_digits(int fd, t_fprintf_nbr_fmt *nbr_fmt,
   int	base_len;
 
   base_len = my_strlen(nbr_fmt->base);
-  len = my_fprintf_nbr_length(nbr_fmt->fmt, nbr, base_len);
+  len = my_vfprintf_nbr_length(nbr_fmt->fmt, nbr, base_len);
   if (!nbr_fmt->fmt->flag_ljust && nbr_fmt->fmt->flag_zero &&
       nbr_fmt->fmt->precision == -1)
     padding = nbr_fmt->fmt->field_width - len;
@@ -48,14 +48,14 @@ int	my_fprintf_nbr_digits(int fd, t_fprintf_nbr_fmt *nbr_fmt,
   return (written);
 }
 
-int		my_fprintf_nbr(int fd, t_fprintf_nbr_fmt *nbr_fmt,
+int		my_vfprintf_nbr(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
 			       uintmax_t nbr, int *written_ptr)
 {
   int		length;
   int		padding;
   int		written;
 
-  length = my_fprintf_nbr_length(nbr_fmt->fmt, nbr, my_strlen(nbr_fmt->base));
+  length = my_vfprintf_nbr_length(nbr_fmt->fmt, nbr, my_strlen(nbr_fmt->base));
   length += nbr_fmt->fmt->flag_hash ? my_strlen(nbr_fmt->prefix) : 0;
   written = 0;
   if (!nbr_fmt->fmt->flag_ljust && !nbr_fmt->fmt->flag_zero)
@@ -70,7 +70,7 @@ int		my_fprintf_nbr(int fd, t_fprintf_nbr_fmt *nbr_fmt,
       my_putstr_fd(fd, nbr_fmt->prefix);
       written += my_strlen(nbr_fmt->prefix);
     }
-  written = my_fprintf_nbr_digits(fd, nbr_fmt, nbr, written);
+  written = my_vfprintf_nbr_digits(fd, nbr_fmt, nbr, written);
   while (nbr_fmt->fmt->flag_ljust &&
   	 written < nbr_fmt->fmt->field_width && ++written)
     my_putchar_fd(fd, ' ');
