@@ -2,7 +2,7 @@
 ** my_strcmp_uncase.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
 ** Last update Mon Dec  5 10:54:37 2016 Arthur Melin

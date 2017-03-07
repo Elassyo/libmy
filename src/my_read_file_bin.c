@@ -2,7 +2,7 @@
 ** my_read_file_bin.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Thu Dec  8 21:17:54 2016 Arthur Melin
 ** Last update Thu Dec  8 21:21:34 2016 Arthur Melin

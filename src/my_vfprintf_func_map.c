@@ -2,7 +2,7 @@
 ** my_vfprintf_func_map.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov 14 17:03:51 2016 Arthur Melin
 ** Last update Mon Feb 27 15:07:45 2017 Arthur Melin

@@ -2,7 +2,7 @@
 ** my_power_ite.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Wed Nov 16 21:49:14 2016 Arthur Melin
 ** Last update Wed Nov 16 21:52:49 2016 Arthur Melin

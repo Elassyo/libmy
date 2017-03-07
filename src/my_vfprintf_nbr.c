@@ -2,7 +2,7 @@
 ** my_vfprintf_nbr.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Tue Nov 15 17:04:47 2016 Arthur Melin
 ** Last update Thu Nov 17 00:33:25 2016 Arthur Melin

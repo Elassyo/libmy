@@ -2,7 +2,7 @@
 ** my_vfprintf_parsers.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov 14 16:41:43 2016 Arthur Melin
 ** Last update Tue Nov 15 20:39:09 2016 Arthur Melin

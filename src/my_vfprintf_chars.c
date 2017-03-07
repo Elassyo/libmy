@@ -2,7 +2,7 @@
 ** my_vfprintf_chars.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Wed Nov 16 10:59:23 2016 Arthur Melin
 ** Last update Mon Feb 27 15:07:04 2017 Arthur Melin

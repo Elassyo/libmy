@@ -2,7 +2,7 @@
 ** my_strchr.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
-** Login   <arthur.melin@epitech.net>
+** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Wed Dec  7 13:49:53 2016 Arthur Melin
 ** Last update Sun Dec 18 12:45:02 2016 Arthur Melin
