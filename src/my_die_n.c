@@ -8,7 +8,7 @@
 ** Last update Tue Jan 17 23:24:43 2017 Arthur Melin
 */
 
-#include  "my.h"
+#include  <my.h>
 
 int	my_die_n(char *err_msg, int n)
 {

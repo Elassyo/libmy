@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 void	*my_die_null(char *err_msg)
 {

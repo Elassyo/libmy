@@ -5,12 +5,12 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Tue Mar  7 11:35:17 2017 Arthur Melin
+## Last update Tue Mar 14 22:11:41 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
 
-SRC		=	my_die_n.c		\
+SRCS		=	my_die_n.c		\
 			my_die_null.c		\
 			my_find_prime_sup.c	\
 			my_fprintf.c		\
@@ -76,20 +76,20 @@ SRC		=	my_die_n.c		\
 			my_vfprintf_nbr_dec.c	\
 			my_vfprintf_parsers.c	\
 			my_wordtab_len.c
-INC		=	my.h			\
-			my_iobuf.h		\
+INCS		=	my.h		\
+			my_iobuf.h	\
 			my_vfprintf.h
-OBJ		=	$(SRC:.c=.o)
+OBJS		=	$(SRCS:.c=.o)
 
-SRCDIR		=	src
-INCDIR		=	src
-OBJDIR		=	obj
+SRCSDIR		=	src
+INCSDIR		=	include
+OBJSDIR		=	obj
 
-DIST_INC	=	my.h
-DIST_INCDIR	=	../../include
+DIST_INCS	=	my.h
+DIST_INCSDIR	=	../../include
 
 CC		=	gcc
-CFLAGS		=	-c -O2 -W -Wall -Wextra -std=c89 -pedantic
+CFLAGS		=	-c -I$(INCSDIR) -O2 -W -Wall -Wextra -std=c89 -pedantic
 AR		=	ar -rc
 CP		=	cp
 MKDIR		=	mkdir -p
@@ -97,24 +97,24 @@ RM		=	rm -rf
 
 all: $(NAME)
 
-$(NAME): $(addprefix $(OBJDIR)/, $(OBJ))
+$(NAME): $(addprefix $(OBJSDIR)/, $(OBJS))
 	$(AR) $@ $^
 
-dist: $(NAME) | $(DIST_INCDIR) clean
-	$(CP) $(INCDIR)/$(DIST_INC) $(DIST_INCDIR)/
+dist: $(NAME) | $(DIST_INCSDIR) clean
+	$(CP) $(addprefix $(INCSDIR)/,$(DIST_INCS)) $(DIST_INCSDIR)/
 	$(RM) .git
 
-$(DIST_INCDIR):
-	$(MKDIR) $(DIST_INCDIR)
+$(DIST_INCSDIR):
+	$(MKDIR) $@
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c $(addprefix $(INCDIR)/, $(INC)) | $(OBJDIR)
+$(OBJSDIR)/%.o: $(SRCSDIR)/%.c $(addprefix $(INCSDIR)/,$(INCS)) | $(OBJSDIR)
 	$(CC) $< $(CFLAGS) -o $@
 
-$(OBJDIR):
-	$(MKDIR) $(OBJDIR)
+$(OBJSDIR):
+	$(MKDIR) $@
 
 clean:
-	$(RM) $(OBJDIR)
+	$(RM) $(OBJSDIR)
 
 fclean: clean
 	$(RM) $(NAME)

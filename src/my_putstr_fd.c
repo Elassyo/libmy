@@ -9,7 +9,7 @@
 */
 
 #include <unistd.h>
-#include "my.h"
+#include <my.h>
 
 void	my_putstr_fd(int fd, char *str)
 {

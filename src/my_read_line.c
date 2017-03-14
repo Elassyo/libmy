@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "my.h"
+#include <my.h>
 
 static int	my_linelen(const char *s, int n)
 {

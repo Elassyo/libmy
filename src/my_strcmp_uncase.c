@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 int	my_strcmp_uncase(char *s1, char *s2)
 {

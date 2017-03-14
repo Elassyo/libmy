@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 void	my_free_wordtab(char **tab)
 {

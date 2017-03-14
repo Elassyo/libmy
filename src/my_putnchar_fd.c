@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "my.h"
+#include <my.h>
 
 void	my_putnchar_fd(int fd, char c, int n)
 {

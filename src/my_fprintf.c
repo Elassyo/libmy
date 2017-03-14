@@ -9,7 +9,7 @@
 */
 
 #include <stdarg.h>
-#include "my.h"
+#include <my.h>
 
 int		my_fprintf(int fd, const char *format, ...)
 {

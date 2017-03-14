@@ -8,7 +8,7 @@
 ** Last update Mon Feb 27 15:07:16 2017 Arthur Melin
 */
 
-#include "my.h"
+#include <my.h>
 #include "my_vfprintf.h"
 
 uintmax_t	my_vfprintf_arg_mask(int length_modifier)

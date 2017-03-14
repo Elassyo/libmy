@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 static int	my_count_words(char *str)
 {

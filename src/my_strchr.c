@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 char	*my_strchr(char *str, char c)
 {

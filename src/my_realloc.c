@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "my.h"
+#include <my.h>
 
 void	*my_realloc(void *old_buf, int old_sz, int new_sz, int elm_sz)
 {

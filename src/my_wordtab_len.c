@@ -8,7 +8,7 @@
 ** Last update Thu Jan 19 16:13:55 2017 Arthur Melin
 */
 
-#include "my.h"
+#include <my.h>
 
 int	my_wordtab_len(char **tab)
 {

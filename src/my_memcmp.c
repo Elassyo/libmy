@@ -8,7 +8,7 @@
 ** Last update Tue Dec 27 23:46:16 2016 Arthur Melin
 */
 
-#include "my.h"
+#include <my.h>
 
 int	my_memcmp(void *s1, void *s2, int n)
 {

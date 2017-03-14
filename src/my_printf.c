@@ -10,7 +10,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-#include "my.h"
+#include <my.h>
 
 int		my_printf(const char *format, ...)
 {
