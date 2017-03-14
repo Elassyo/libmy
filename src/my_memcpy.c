@@ -5,20 +5,20 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
+** Last update Tue Mar 14 23:25:18 2017 Arthur Melin
 */
 
 #include <my.h>
 
 void	*my_memcpy(void *dest, void *src, int size)
 {
-  int	offset;
+  int	i;
 
-  offset = 0;
-  while (offset < size)
+  i = 0;
+  while (i < size)
     {
-      ((char *)dest)[offset] = ((char *)src)[offset];
-      offset++;
+      ((char *)dest)[i] = ((char *)src)[i];
+      i++;
     }
   return (dest);
 }

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
+** Last update Tue Mar 14 23:23:49 2017 Arthur Melin
 */
 
 #include <stdlib.h>
@@ -15,8 +15,9 @@ char	*my_strdup(char *src)
 {
   char	*dest;
 
-  dest = malloc(my_strlen(src) + 1);
-  if (!dest)
-    return (dest);
+  if (!src)
+    return (NULL);
+  if (!(dest = malloc(my_strlen(src) + 1)))
+    return (NULL);
   return (my_strcpy(dest, src));
 }

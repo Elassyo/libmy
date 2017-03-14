@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Tue Mar  7 11:04:12 2017 Arthur Melin
+** Last update Tue Mar 14 23:28:22 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -142,6 +142,7 @@ char	*my_strcapitalize(char *str);
 */
 int	my_memcmp(void *s1, void *s2, int n);
 void	*my_memcpy(void *dest, void *src, int size);
+void	*my_memdup(void *src, int size);
 void	*my_memset(void *ptr, int c, int size);
 void	*my_realloc(void *old_buf, int old_sz, int new_sz, int elm_sz);
 

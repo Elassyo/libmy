@@ -40,9 +40,9 @@ static char	*my_worddup(char *str)
   len = 0;
   while (my_isalnum(*str++))
     len++;
-  word = malloc(len + 1);
-  if (word)
-    my_strncpy(word, str, len);
+  if (!(word = malloc(len + 1)))
+    return (NULL);
+  my_strncpy(word, str, len);
   return (word);
 }
 
@@ -52,23 +52,21 @@ char	**my_str_to_wordtab(char *str)
   int	in_word;
   char	**word_tab;
 
-  word_tab = malloc((my_count_words(str) + 1) * sizeof(char *));
-  if (word_tab)
+  if (!(word_tab = malloc((my_count_words(str) + 1) * sizeof(char *))))
+    return (NULL);
+  offset = 0;
+  in_word = 0;
+  while (*str)
     {
-      offset = 0;
-      in_word = 0;
-      while (*str)
-	{
-	  if (!in_word && my_isalnum(*str))
-	    {
-	      word_tab[offset++] = my_worddup(str);
-	      in_word = 1;
-	    }
-	  if (!my_isalnum(*str))
-	    in_word = 0;
-	  str++;
-	}
-      word_tab[offset] = 0;
+      if (!in_word && my_isalnum(*str))
+        {
+          word_tab[offset++] = my_worddup(str);
+          in_word = 1;
+        }
+      if (!my_isalnum(*str))
+        in_word = 0;
+      str++;
     }
+  word_tab[offset] = 0;
   return (word_tab);
 }
