@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 22:14:18 2016 Arthur Melin
-** Last update Mon Feb 27 15:07:56 2017 Arthur Melin
+** Last update Tue Mar 14 22:15:01 2017 Arthur Melin
 */
 
 #ifndef MY_VFPRINTF_H_
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <string.h>
-# include "my.h"
+# include <my.h>
 
 typedef struct	s_vfprintf_fmt
 {
