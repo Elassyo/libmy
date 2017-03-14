@@ -8,7 +8,7 @@
 ** Last update Mon Feb 27 15:07:04 2017 Arthur Melin
 */
 
-#include "my_vfprintf.h"
+#include <my_vfprintf.h>
 
 static int	my_strlen_np(char *str)
 {

@@ -8,7 +8,7 @@
 ** Last update Mon Feb 27 15:07:45 2017 Arthur Melin
 */
 
-#include "my_vfprintf.h"
+#include <my_vfprintf.h>
 
 static void	my_vfprintf_func_map_put(t_vfprintf_func_map *map, int i,
 					char chr, t_vfprintf_func *func)

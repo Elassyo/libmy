@@ -9,7 +9,7 @@
 */
 
 #include <my.h>
-#include "my_vfprintf.h"
+#include <my_vfprintf.h>
 
 uintmax_t	my_vfprintf_arg_mask(int length_modifier)
 {

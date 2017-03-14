@@ -8,7 +8,7 @@
 ** Last update Wed Nov 16 18:54:59 2016 Arthur Melin
 */
 
-#include "my_vfprintf.h"
+#include <my_vfprintf.h>
 
 static intmax_t		signed_nbr_to_intmax(int size, va_list *args)
 {
