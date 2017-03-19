@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Sun Mar 19 17:54:36 2017 Arthur Melin
+** Last update Sun Mar 19 18:15:13 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -29,7 +29,7 @@
 # define MY_SQ(x) (x * x)
 
 # define MY_PI 3.14159265359
-# define MY_INF	(1.0 / 0.0)
+# define MY_INF (1.0 / 0.0)
 # define MY_NAN (0.0 / 0.0)
 
 /*
