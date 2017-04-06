@@ -8,14 +8,15 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-void	*my_memset(void *ptr, int c, int size)
+void			*my_memset(void *ptr, int c, size_t n)
 {
-  int	i;
+  register size_t	i;
 
   i = 0;
-  while (i < size)
+  while (i < n)
     ((char *)ptr)[i++] = c;
   return (ptr);
 }

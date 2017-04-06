@@ -11,7 +11,7 @@
 #include <my.h>
 #include <my_vfprintf.h>
 
-uintmax_t	my_vfprintf_arg_mask(int length_modifier)
+uintmax_t	my_vfprintf_arg_mask(size_t length_modifier)
 {
   uintmax_t	mask;
 
@@ -31,11 +31,10 @@ static int		my_vfprintf_do(int fd, const char *str,
 {
   const char		*str_start;
   int			i;
-  t_vfprintf_fmt		fmt;
+  t_vfprintf_fmt	fmt;
   t_vfprintf_func_map	func_map[13];
 
-  str_start = str;
-  str++;
+  str_start = str++;
   my_memset(&fmt, 0, sizeof(fmt));
   my_vfprintf_parse_flags(&fmt, &str);
   my_vfprintf_parse_width(&fmt, &str, args);
@@ -56,25 +55,25 @@ static int		my_vfprintf_do(int fd, const char *str,
   return (0);
 }
 
-int		my_vfprintf(int fd, const char *format, va_list *va)
+int		my_vfprintf(int fd, const char *fmt, va_list *va)
 {
   int		off;
-  int		written;
+  int		res;
 
-  if (!format)
+  if (!fmt)
     return (-1);
-  written = 0;
-  while (*format)
+  res = 0;
+  while (*fmt)
     {
       off = 0;
-      if (*format != '%' ||
-	  !(off = my_vfprintf_do(fd, format, va, &written)))
+      if (*fmt != '%' ||
+	  !(off = my_vfprintf_do(fd, fmt, va, &res)))
 	{
-	  my_putchar_fd(fd, *format);
+	  my_fputc(fd, *fmt);
 	  off = 1;
-	  written++;
+	  res++;
 	}
-      format += off;
+      fmt += off;
     }
-  return (written);
+  return (res);
 }

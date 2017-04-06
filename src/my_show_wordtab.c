@@ -14,8 +14,8 @@ int	my_show_wordtab(char **tab)
 {
   while (*tab)
     {
-      my_putstr(*tab++);
-      my_putchar('\n');
+      my_puts(*tab++);
+      my_putc('\n');
     }
   return (0);
 }

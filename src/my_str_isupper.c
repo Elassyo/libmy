@@ -10,15 +10,12 @@
 
 #include <my.h>
 
-int	my_str_isupper(char *str)
+int	my_str_isupper(const char *s)
 {
-  int	ret;
-
-  ret = 1;
-  while (*str)
+  while (*s)
     {
-      if (!my_isupper(*str++))
-	ret = 0;
+      if (!my_isupper(*s++))
+	return (0);
     }
-  return (ret);
+  return (1);
 }

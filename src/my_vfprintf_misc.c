@@ -5,13 +5,13 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Thu Nov 17 00:20:27 2016 Arthur Melin
-** Last update Thu Nov 17 00:34:33 2016 Arthur Melin
+** Last update Thu Apr  6 22:31:02 2017 Arthur Melin
 */
 
 #include <my_vfprintf.h>
 
 int			my_vfprintf_ptr(int fd, t_vfprintf_fmt *fmt,
-				       va_list *args, int *written_ptr)
+					va_list *args, int *written_ptr)
 {
   uintmax_t		ptr;
   t_vfprintf_nbr_fmt	nbr_fmt;
@@ -35,8 +35,8 @@ int			my_vfprintf_ptr(int fd, t_vfprintf_fmt *fmt,
 }
 
 int		my_vfprintf_wrt(int fd __attribute__ ((__unused__)),
-			       t_vfprintf_fmt *fmt, va_list *args,
-			       int *written_ptr)
+			        t_vfprintf_fmt *fmt, va_list *args,
+			        int *written_ptr)
 {
   intmax_t	written;
   void		*ptr;
@@ -52,11 +52,11 @@ int		my_vfprintf_wrt(int fd __attribute__ ((__unused__)),
 }
 
 int		my_vfprintf_pct(int fd,
-			       t_vfprintf_fmt *fmt __attribute__ ((__unused__)),
-			       va_list *args __attribute__ ((__unused__)),
-			       int *written_ptr)
+				t_vfprintf_fmt *fmt __attribute__ ((__unused__)),
+				va_list *args __attribute__ ((__unused__)),
+				int *written_ptr)
 {
-  my_putchar_fd(fd, '%');
+  my_fputc(fd, '%');
   (*written_ptr)++;
   return (0);
 }

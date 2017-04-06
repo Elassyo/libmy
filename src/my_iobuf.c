@@ -39,21 +39,21 @@ void	my_iobuf_free(t_iobuf *iobuf)
   free(iobuf);
 }
 
-void	my_iobuf_flush(t_iobuf *iobuf)
+void		my_iobuf_flush(t_iobuf *iobuf)
 {
-  int	off;
-  int	write_sz;
+  size_t	off;
+  int		wr_sz;
 
   if (!iobuf || !iobuf->buf)
     return ;
   off = 0;
   while (off != iobuf->off &&
-	 (write_sz = write(iobuf->fd, iobuf->buf + off, iobuf->off - off)) > 0)
-    off += write_sz;
+	 (wr_sz = write(iobuf->fd, iobuf->buf + off, iobuf->off - off)) > 0)
+    off += wr_sz;
   iobuf->off = 0;
 }
 
-void	my_iobuf_putchar(t_iobuf *iobuf, char c)
+void	my_iobuf_putchar(t_iobuf *iobuf, int c)
 {
   if (!iobuf || !iobuf->buf)
     return ;
@@ -64,28 +64,28 @@ void	my_iobuf_putchar(t_iobuf *iobuf, char c)
     my_iobuf_flush(iobuf);
 }
 
-void	my_iobuf_putstr(t_iobuf *iobuf, char *str)
+void		my_iobuf_putstr(t_iobuf *iobuf, const char *s)
 {
-  int	offset;
-  int	length;
-  int	write_sz;
+  size_t	off;
+  size_t	len;
+  int		wr_sz;
 
-  if (!iobuf || !iobuf->buf || !str)
+  if (!iobuf || !iobuf->buf || !s)
     return ;
-  length = my_strlen(str);
-  if (iobuf->off + length > iobuf->size)
+  len = my_strlen(s);
+  if (iobuf->off + len > iobuf->size)
     my_iobuf_flush(iobuf);
-  offset = 0;
-  if (length >= iobuf->size)
+  off = 0;
+  if (len >= iobuf->size)
     {
-      while (offset != length &&
-	     (write_sz =  write(iobuf->fd, str + offset, length - offset)) > 0)
-	offset += write_sz;
+      while (off != len &&
+	     (wr_sz =  write(iobuf->fd, s + off, len - off)) > 0)
+	off += wr_sz;
     }
   else
     {
-      my_memcpy(iobuf->buf + iobuf->off, str, length);
-      iobuf->off += length;
+      my_memcpy(iobuf->buf + iobuf->off, s, len);
+      iobuf->off += len;
       if (iobuf->off >= iobuf->size)
 	my_iobuf_flush(iobuf);
     }

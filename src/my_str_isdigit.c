@@ -1,5 +1,5 @@
 /*
-** my_is_prime.c for libmy in /home/arthur.melin/Code/libmy
+** my_str_isdigit.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -10,18 +10,12 @@
 
 #include <my.h>
 
-int	my_is_prime(int nb)
+int	my_str_isdigit(const char *s)
 {
-  int	div;
-
-  if (nb <= 1)
-    return (0);
-  div = 2;
-  while (nb != div)
+  while (*s)
     {
-      if (nb % div == 0)
+      if (!my_isdigit(*s++))
 	return (0);
-      div++;
     }
   return (1);
 }

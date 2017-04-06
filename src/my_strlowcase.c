@@ -8,18 +8,19 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-char	*my_strlowcase(char *str)
+char			*my_strlowcase(char *s)
 {
-  int i;
+  register size_t	i;
 
   i = 0;
-  while (str[i])
+  while (s[i])
     {
-      if (my_isupper(str[i]))
-	str[i] += 32;
+      if (my_isupper(s[i]))
+	s[i] += 32;
       i++;
     }
-  return (str);
+  return (s);
 }

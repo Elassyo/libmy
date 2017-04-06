@@ -11,8 +11,8 @@
 #include <stdlib.h>
 #include <my.h>
 
-void	*my_die_null(char *err_msg)
+void	*my_die_null(const char *s)
 {
-  my_puterr(err_msg);
+  my_puterr(s);
   return (NULL);
 }

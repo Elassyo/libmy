@@ -10,7 +10,7 @@
 
 #include <my.h>
 
-int	my_islower(char c)
+int	my_islower(int c)
 {
   return ('a' <= c && c <= 'z');
 }

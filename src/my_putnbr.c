@@ -12,20 +12,13 @@
 
 int	my_putnbr(int nbr)
 {
-  int	i;
-
-  if (nbr == 0)
-    my_putchar('0');
   if (nbr < 0)
     {
-      my_putchar('-');
+      my_putc('-');
       nbr = -nbr;
     }
-  i = 0;
-  while (my_power_rec(10, i - 1) < 214748364
-         && nbr >= my_power_rec(10, i))
-    i++;
-  while (i-- > 0)
-    my_putchar('0' + (nbr / my_power_rec(10, i) % 10));
+  if (nbr > 10)
+    my_putnbr(nbr / 10);
+  my_putc('0' + nbr % 10);
   return (0);
 }

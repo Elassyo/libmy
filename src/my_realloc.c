@@ -11,13 +11,13 @@
 #include <stdlib.h>
 #include <my.h>
 
-void	*my_realloc(void *old_buf, int old_sz, int new_sz, int elm_sz)
+void	*my_realloc(void *src, size_t old, size_t new, size_t element)
 {
-  void	*new_buf;
+  void	*res;
 
-  if (!(new_buf = malloc(new_sz * elm_sz)))
+  if (!(res = malloc(new * element)))
     return (NULL);
-  my_memcpy(new_buf, old_buf, old_sz * elm_sz);
-  free(old_buf);
-  return (new_buf);
+  my_memcpy(res, src, old * element);
+  free(src);
+  return (res);
 }

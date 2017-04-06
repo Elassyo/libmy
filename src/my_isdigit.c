@@ -1,5 +1,5 @@
 /*
-** my_putstr_fd.c for libmy in /home/arthur.melin/Code/libmy
+** my_isdigit.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -8,10 +8,9 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-#include <unistd.h>
 #include <my.h>
 
-void	my_putstr_fd(int fd, char *str)
+int	my_isdigit(int c)
 {
-  write(fd, str, my_strlen(str));
+  return ('0' <= c && c <= '9');
 }

@@ -12,13 +12,13 @@
 #include <unistd.h>
 #include <my.h>
 
-int		my_printf(const char *format, ...)
+int		my_printf(const char *fmt, ...)
 {
   int		ret;
   va_list	va;
 
-  va_start(va, format);
-  ret = my_vfprintf(STDOUT_FILENO, format, &va);
+  va_start(va, fmt);
+  ret = my_vfprintf(STDOUT_FILENO, fmt, &va);
   va_end(va);
   return (ret);
 }

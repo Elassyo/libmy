@@ -11,13 +11,13 @@
 #include <stdlib.h>
 #include <my.h>
 
-void	*my_memdup(void *src, int size)
+void	*my_memdup(const void *src, size_t n)
 {
   void	*dest;
 
   if (!src)
     return (NULL);
-  if (!(dest = malloc(size)))
+  if (!(dest = malloc(n)))
     return (NULL);
-  return (my_memcpy(dest, src, size));
+  return (my_memcpy(dest, src, n));
 }

@@ -1,5 +1,5 @@
 /*
-** my_putnchar_fd.c for libmy in /home/arthur.melin/Code/libmy
+** my_fputnc.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -12,21 +12,21 @@
 #include <unistd.h>
 #include <my.h>
 
-void	my_putnchar_fd(int fd, char c, int n)
+void	my_fputnc(int fd, int c, size_t n)
 {
-  char	*buffer;
+  char	_c;
+  char	*buf;
 
-  if (n < 0)
-    return ;
-  if (!(buffer = malloc(n)))
+  if (!(buf = malloc(n)))
     {
+      _c = c;
       while (n--)
-	write(fd, &c, 1);
+	write(fd, &_c, 1);
     }
   else
     {
-      my_memset(buffer, c, n);
-      write(fd, buffer, n);
-      free(buffer);
+      my_memset(buf, c, n);
+      write(fd, buf, n);
+      free(buf);
     }
 }

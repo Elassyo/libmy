@@ -8,14 +8,15 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-int	my_strlen(char *str)
+size_t			my_strlen(const char *s)
 {
-  int	len;
+  register size_t	res;
 
-  len = 0;
-  while (*str++)
-    len++;
-  return (len);
+  res = 0;
+  while (s[res])
+    res++;
+  return (res);
 }

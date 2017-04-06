@@ -11,13 +11,13 @@
 #include <stdarg.h>
 #include <my.h>
 
-int		my_fprintf(int fd, const char *format, ...)
+int		my_fprintf(int fd, const char *fmt, ...)
 {
   int		ret;
   va_list	va;
 
-  va_start(va, format);
-  ret = my_vfprintf(fd, format, &va);
+  va_start(va, fmt);
+  ret = my_vfprintf(fd, fmt, &va);
   va_end(va);
   return (ret);
 }

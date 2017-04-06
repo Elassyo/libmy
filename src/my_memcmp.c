@@ -8,14 +8,15 @@
 ** Last update Tue Dec 27 23:46:16 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-int	my_memcmp(void *s1, void *s2, int n)
+int			my_memcmp(const void *s1, const void *s2, size_t n)
 {
-  int	v;
+  register size_t	i;
 
-  v = 0;
-  while (n-- && v == 0)
-    v = *(unsigned char *)s1 - *(unsigned char *)s2;
-  return (v);
+  i = 0;
+  while (i < n && *((unsigned char *)s1 + i) == *((unsigned char *)s2 + i))
+    i++;
+  return (*((unsigned char *)s1 + i) - *((unsigned char *)s2 + i));
 }

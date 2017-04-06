@@ -11,12 +11,15 @@
 #include <stdlib.h>
 #include <my.h>
 
-void	my_free_wordtab(char **tab)
+void			my_free_wordtab(char **tab)
 {
-  int	i;
+  register size_t	i;
 
-  i = 0;
-  while (tab[i])
-    free(tab[i]);
+  if (tab)
+    {
+      i = 0;
+      while (tab[i])
+	free(tab[i++]);
+    }
   free(tab);
 }

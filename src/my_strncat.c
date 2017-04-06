@@ -8,12 +8,13 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-char	*my_strncat(char *dest, char *src, int n)
+char			*my_strncat(char *dest, const char *src, size_t n)
 {
-  int	len;
-  int	i;
+  size_t		len;
+  register size_t	i;
 
   len = my_strlen(dest);
   i = 0;

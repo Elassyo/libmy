@@ -11,62 +11,53 @@
 #include <stdlib.h>
 #include <my.h>
 
-static int	my_count_words(char *str)
+static int	my_count_words(const char *s)
 {
-  int		in_word;
-  int		words;
+  int		in;
+  int		res;
 
-  in_word = 0;
-  words = 0;
-  while (*str)
+  in = 0;
+  res = 0;
+  while (*s)
     {
-      if (!in_word && my_isalnum(*str))
-	{
-	  in_word = 1;
-	  words++;
-	}
-      if (in_word && !my_isalnum(*str))
-	in_word = 0;
-      str++;
+      if (!in && my_isalnum(*s))
+      	res++;
+      in = my_isalnum(*s++);
     }
-  return (words);
+  return (res);
 }
 
-static char	*my_worddup(char *str)
+static char	*my_worddup(const char *s)
 {
-  char		*word;
+  char		*res;
   int		len;
 
   len = 0;
-  while (my_isalnum(*str++))
+  while (my_isalnum(s[len]))
     len++;
-  if (!(word = malloc(len + 1)))
+  if (!(res = malloc(len + 1)))
     return (NULL);
-  my_strncpy(word, str, len);
-  return (word);
+  my_strncpy(res, s, len);
+  res[len + 1] = 0;
+  return (res);
 }
 
-char	**my_str_to_wordtab(char *str)
+char	**my_str_to_wordtab(const char *s)
 {
-  int	offset;
-  int	in_word;
-  char	**word_tab;
+  int	i;
+  int	in;
+  char	**res;
 
-  if (!(word_tab = malloc((my_count_words(str) + 1) * sizeof(char *))))
+  if (!(res = malloc((my_count_words(s) + 1) * sizeof(char *))))
     return (NULL);
-  offset = 0;
-  in_word = 0;
-  while (*str)
+  i = 0;
+  in = 0;
+  while (*s)
     {
-      if (!in_word && my_isalnum(*str))
-        {
-          word_tab[offset++] = my_worddup(str);
-          in_word = 1;
-        }
-      if (!my_isalnum(*str))
-        in_word = 0;
-      str++;
+      if (!in && my_isalnum(*s))
+	res[i++] = my_worddup(s);
+      in = my_isalnum(*s++);
     }
-  word_tab[offset] = 0;
-  return (word_tab);
+  res[i] = NULL;
+  return (res);
 }

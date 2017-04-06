@@ -8,11 +8,12 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-char	*my_strncpy(char *dest, char *src, int n)
+char			*my_strncpy(char *dest, const char *src, size_t n)
 {
-  int	i;
+  register size_t	i;
 
   i = 0;
   while (i < n && src[i])

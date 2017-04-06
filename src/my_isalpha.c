@@ -10,7 +10,7 @@
 
 #include <my.h>
 
-int	my_isalpha(char c)
+int	my_isalpha(int c)
 {
   return (my_isupper(c) || my_islower(c));
 }

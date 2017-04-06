@@ -8,21 +8,22 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-char	*my_revstr(char *str)
+char			*my_revstr(char *s)
 {
-  int	len;
-  int	i;
+  size_t		len;
+  size_t		hlen;
+  register size_t	i;
 
-  len = 0;
-  while (str[len])
-    len++;
+  len = my_strlen(s);
+  hlen = len / 2;
   i = 0;
-  while (i < (len / 2))
+  while (i < hlen)
     {
-      my_swap_char(str + i, str + len - i - 1);
+      my_swap_char(s + i, s + len - i - 1);
       i++;
     }
-  return (str);
+  return (s);
 }

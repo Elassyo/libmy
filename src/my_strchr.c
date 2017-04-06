@@ -11,15 +11,13 @@
 #include <stdlib.h>
 #include <my.h>
 
-char	*my_strchr(char *str, char c)
+const char	*my_strchr(const char *s, int c)
 {
-  while (1)
+  while (*s)
     {
-      if (*str == c)
-	return (str);
-      if (!*str)
-	return (NULL);
-      str++;
+      if (*s == c)
+      	return (s);
+      s++;
     }
   return (NULL);
 }

@@ -10,21 +10,21 @@
 
 #include <my_vfprintf.h>
 
-static int	my_strlen_np(char *str)
+static size_t	my_strlen_np(char *str)
 {
-  int		length;
+  size_t	res;
 
-  length = 0;
+  res = 0;
   while (*str)
     {
-      length += my_isprint(*str) ? 1 : 4;
+      res += my_isprint(*str) ? 1 : 4;
       str++;
     }
-  return (length);
+  return (res);
 }
 
 int	my_vfprintf_chr(int fd, t_vfprintf_fmt *fmt,
-		       va_list *args, int *written_ptr)
+			va_list *args, int *written_ptr)
 {
   int	written;
 
@@ -32,18 +32,18 @@ int	my_vfprintf_chr(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - 1  > 0 && fmt->field_width-- && ++written)
-      	my_putchar_fd(fd, ' ');
+      	my_fputc(fd, ' ');
     }
-  my_putchar_fd(fd, va_arg(*args, int));
+  my_fputc(fd, va_arg(*args, int));
   written++;
   while (fmt->flag_ljust && written < fmt->field_width && ++written)
-    my_putchar_fd(fd, ' ');
+    my_fputc(fd, ' ');
   *written_ptr += written;
   return (0);
 }
 
 int	my_vfprintf_str(int fd, t_vfprintf_fmt *fmt,
-		       va_list *args, int *written_ptr)
+			va_list *args, int *written_ptr)
 {
   char	*str;
   int	length;
@@ -56,18 +56,18 @@ int	my_vfprintf_str(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - length > 0 && fmt->field_width-- && ++written)
-      	my_putchar_fd(fd, ' ');
+      	my_fputc(fd, ' ');
     }
-  my_putstr_fd(fd, str);
+  my_fputs(fd, str);
   written += length;
   while (fmt->flag_ljust && written < fmt->field_width && ++written)
-    my_putchar_fd(fd, ' ');
+    my_fputc(fd, ' ');
   *written_ptr += written;
   return (0);
 }
 
 int	my_vfprintf_str_np(int fd, t_vfprintf_fmt *fmt,
-			  va_list *args, int *written_ptr)
+			   va_list *args, int *written_ptr)
 {
   char	*str;
   int	length;
@@ -80,17 +80,17 @@ int	my_vfprintf_str_np(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - length > 0 && fmt->field_width-- && ++written)
-      	my_putchar_fd(fd, ' ');
+      	my_fputc(fd, ' ');
     }
   while (*str)
     {
       if (my_isprint(*str) && ++written)
-	my_putchar_fd(fd, *str++);
+	my_fputc(fd, *str++);
       else
 	written += my_fprintf(fd, "\\%03hho", *str++);
     }
   while (fmt->flag_ljust && written < fmt->field_width && ++written)
-    my_putchar_fd(fd, ' ');
+    my_fputc(fd, ' ');
   *written_ptr += written;
   return (0);
 }

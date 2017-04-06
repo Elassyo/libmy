@@ -10,7 +10,7 @@
 
 #include <my.h>
 
-int	my_isalnum(char c)
+int	my_isalnum(int c)
 {
-  return (my_isalpha(c) || my_isnum(c));
+  return (my_isalpha(c) || my_isdigit(c));
 }

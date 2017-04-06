@@ -10,29 +10,20 @@
 
 #include <my.h>
 
-char	*my_strcapitalize(char *str)
+char	*my_strcapitalize(char *s)
 {
   int	i;
-  int	in_word;
+  int	in;
 
   i = 0;
-  in_word = 0;
-  while (str[i])
+  in = 0;
+  while (s[i])
     {
-      if (in_word)
-	{
-	  if (!my_isalpha(str[i]) && !my_isnum(str[i]))
-	    in_word = 0;
-	  if (my_isupper(str[i]))
-	    str[i] += 32;
-	}
-      if (!in_word && (my_isalpha(str[i]) || my_isnum(str[i])))
-	{
-	  if (my_islower(str[i]))
-	    str[i] -= 32;
-	  in_word = 1;
-	}
-      i++;
+      if (in && my_isupper(s[i]))
+	s[i] += 32;
+      if (!in && my_islower(s[i]))
+	s[i] -= 32;
+      in = my_isalnum(s[i++]);
     }
-  return (str);
+  return (s);
 }

@@ -12,26 +12,26 @@
 #include <unistd.h>
 #include <my.h>
 
-char	*my_read_file_bin(int fd, int *off)
+char	*my_read_file_bin(int fd, size_t *n)
 {
-  int	rsz;
+  int	rd_sz;
   int	buf_off;
-  char	*buffer;
+  char	*buf;
 
-  if (!(buffer = malloc(65536)))
+  if (!(buf = malloc(65536)))
     return (NULL);
-  *off = 0;
+  *n = 0;
   buf_off = 0;
-  while ((rsz = read(fd, buffer + *off, 65536 - buf_off)) > 0)
+  while ((rd_sz = read(fd, buf + *n, 65536 - buf_off)) > 0)
     {
-      *off += rsz;
-      buf_off += rsz;
+      *n += rd_sz;
+      buf_off += rd_sz;
       if (buf_off == 65536)
 	{
-	  if (!(buffer = my_realloc(buffer, *off, *off + 65536, sizeof(char))))
+	  if (!(buf = my_realloc(buf, *n, *n + 65536, 1)))
 	    return (NULL);
 	  buf_off = 0;
 	}
     }
-  return (buffer);
+  return (buf);
 }

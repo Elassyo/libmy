@@ -10,7 +10,7 @@
 
 #include <my.h>
 
-int	my_isupper(char c)
+int	my_isupper(int c)
 {
   return ('A' <= c && c <= 'Z');
 }

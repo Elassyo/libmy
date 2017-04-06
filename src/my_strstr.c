@@ -10,18 +10,15 @@
 
 #include <my.h>
 
-char	*my_strstr(char *str, char *to_find)
+const char	*my_strstr(const char *haystack, const char *needle)
 {
-  int	len;
+  size_t	len;
 
-  len = 0;
-  while (to_find[len])
-    len++;
-  if (len == 0)
-    return (str);
-  while (*str && my_strncmp(str, to_find, len))
-    str++;
-  if (*str)
-    return (str);
-  return (0);
+  if (!(len = my_strlen(needle)))
+    return (haystack);
+  while (*haystack && my_strncmp(haystack, needle, len))
+    haystack++;
+  if (*haystack)
+    return (haystack);
+  return (NULL);
 }

@@ -1,5 +1,5 @@
 /*
-** my_power_ite.c for libmy in /home/arthur.melin/Code/libmy
+** my_pow.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -10,16 +10,14 @@
 
 #include <my.h>
 
-long	my_power_ite(int base, int power)
+double		my_pow(double x, unsigned int y)
 {
-  long	res;
+  double	res;
 
-  if (power < 0)
-    return (0);
-  if (power == 0)
+  if (y == 0)
     return (1);
-  res = 1;
-  while (power--)
-    res *= base;
+  res = 1.0;
+  while (y--)
+    res *= x;
   return (res);
 }

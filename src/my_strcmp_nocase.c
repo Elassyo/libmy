@@ -1,5 +1,5 @@
 /*
-** my_strcmp_uncase.c for libmy in /home/arthur.melin/Code/libmy
+** my_strcmp_nocase.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <my.h>
 
-int	my_strcmp_uncase(char *s1, char *s2)
+int	my_strcmp_nocase(const char *s1, const char *s2)
 {
   int	ret;
   char	*s1_u;

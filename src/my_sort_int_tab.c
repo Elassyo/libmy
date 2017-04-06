@@ -5,29 +5,29 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
+** Last update Thu Apr  6 15:44:57 2017 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-void	my_sort_int_tab(int *tab, int size)
+void		my_sort_int_tab(int *tab, size_t n)
 {
-  int	sort_offset;
-  int	search_offset;
-  int	min_offset;
+  size_t	i;
+  size_t	j;
+  size_t	min;
 
-  sort_offset = 0;
-  while (sort_offset < size)
+  i = 0;
+  while (i < n)
     {
-      min_offset = sort_offset;
-      search_offset = sort_offset;
-      while (search_offset < size)
+      j = i;
+      min = i;
+      while (j < n)
 	{
-	  if (tab[search_offset] < tab[min_offset])
-	    min_offset = search_offset;
-	  search_offset++;
+	  if (tab[j] < tab[min])
+	    min = j;
+	  j++;
 	}
-      my_swap(tab + sort_offset, tab + min_offset);
-      sort_offset++;
+      my_swap_int(tab + i++, tab + min);
     }
 }

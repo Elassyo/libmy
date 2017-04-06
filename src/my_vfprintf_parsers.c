@@ -5,17 +5,14 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov 14 16:41:43 2016 Arthur Melin
-** Last update Tue Nov 15 20:39:09 2016 Arthur Melin
+** Last update Thu Apr  6 22:37:32 2017 Arthur Melin
 */
 
 #include <my_vfprintf.h>
 
 void	my_vfprintf_parse_flags(t_vfprintf_fmt *fmt, const char **str)
 {
-  int	cont;
-
-  cont = 1;
-  while (cont)
+  while (1)
     {
       if (**str == '-')
 	fmt->flag_ljust = 1;
@@ -28,9 +25,8 @@ void	my_vfprintf_parse_flags(t_vfprintf_fmt *fmt, const char **str)
       else if (**str == '0')
 	fmt->flag_zero = 1;
       else
-	cont = 0;
-      if (cont)
-	(*str)++;
+	return ;
+      (*str)++;
     }
 }
 
@@ -43,14 +39,8 @@ void	my_vfprintf_parse_width(t_vfprintf_fmt *fmt, const char **str,
       (*str)++;
     }
   else
-    {
-      while (my_isnum(**str))
-	{
-	  fmt->field_width *= 10;
-	  fmt->field_width += **str - '0';
-	  (*str)++;
-	}
-    }
+    while (my_isdigit(**str))
+      fmt->field_width = fmt->field_width * 10 + *(*str)++ - '0';
 }
 
 void	my_vfprintf_parse_prec(t_vfprintf_fmt *fmt, const char **str,
@@ -58,21 +48,14 @@ void	my_vfprintf_parse_prec(t_vfprintf_fmt *fmt, const char **str,
 {
   if (**str == '.')
     {
-      (*str)++;
-      if (**str == '*')
+      if (*++(*str) == '*')
 	{
 	  fmt->precision = va_arg(*args, int);
 	  (*str)++;
 	}
       else
-	{
-	  while (my_isnum(**str))
-	    {
-	      fmt->precision *= 10;
-	      fmt->precision += **str - '0';
-	      (*str)++;
-	    }
-	}
+	while (my_isdigit(**str))
+	  fmt->precision = fmt->precision * 10 + *(*str)++ - '0';
     }
   else
     fmt->precision = -1;

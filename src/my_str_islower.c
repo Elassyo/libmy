@@ -10,15 +10,12 @@
 
 #include <my.h>
 
-int	my_str_islower(char *str)
+int	my_str_islower(const char *s)
 {
-  int	ret;
-
-  ret = 1;
-  while (*str)
+  while (*s)
     {
-      if (!my_islower(*str++))
-	ret = 0;
+      if (!my_islower(*s++))
+	return (0);
     }
-  return (ret);
+  return (1);
 }

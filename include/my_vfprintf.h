@@ -56,7 +56,7 @@ void	my_vfprintf_func_map_fill(t_vfprintf_func_map *map);
 int	my_vfprintf_nbr(int fd, t_vfprintf_nbr_fmt *fmt,
 		       uintmax_t nbr, int *written_ptr);
 
-uintmax_t	my_vfprintf_arg_mask(int length_modifier);
+uintmax_t	my_vfprintf_arg_mask(size_t length_modifier);
 
 t_vfprintf_func	my_vfprintf_nbr_dec_s;
 t_vfprintf_func	my_vfprintf_nbr_dec_u;

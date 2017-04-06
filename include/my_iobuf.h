@@ -15,12 +15,12 @@
 
 # define IOBUF_SZ 65536
 
-struct	s_iobuf
+struct		s_iobuf
 {
   char		*buf;
   int		fd;
-  int		off;
-  int		size;
+  size_t	off;
+  size_t	size;
 };
 
 #endif /* !IOBUF_H_ */

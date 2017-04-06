@@ -8,16 +8,17 @@
 ** Last update Tue Mar 14 23:25:18 2017 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-void	*my_memcpy(void *dest, void *src, int size)
+void			*my_memcpy(void *dest, const void *src, size_t n)
 {
-  int	i;
+  register size_t	i;
 
   i = 0;
-  while (i < size)
+  while (i < n)
     {
-      ((char *)dest)[i] = ((char *)src)[i];
+      ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
       i++;
     }
   return (dest);

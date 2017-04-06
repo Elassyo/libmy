@@ -1,5 +1,5 @@
 /*
-** my_str_isnum.c for libmy in /home/arthur.melin/Code/libmy
+** my_fputc.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -8,17 +8,13 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <unistd.h>
 #include <my.h>
 
-int	my_str_isnum(char *str)
+void	my_fputc(int fd, int c)
 {
-  int	ret;
+  char	_c;
 
-  ret = 1;
-  while (*str)
-    {
-      if (!my_isnum(*str++))
-	ret = 0;
-    }
-  return (ret);
+  _c = c;
+  write(fd, &_c, 1);
 }

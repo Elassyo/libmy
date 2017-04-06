@@ -8,15 +8,16 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stdlib.h>
 #include <my.h>
 
-char	*my_strcpy(char *dest, char *src)
+char			*my_strcpy(char *dest, const char *src)
 {
-  int	i;
+  register size_t	i;
 
   i = 0;
   while (*src)
     dest[i++] = *src++;
-  dest[i] = '\0';
+  dest[i] = 0;
   return (dest);
 }

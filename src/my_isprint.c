@@ -10,7 +10,7 @@
 
 #include <my.h>
 
-int	my_isprint(char c)
+int	my_isprint(int c)
 {
   return (' ' <= c && c <= '~');
 }

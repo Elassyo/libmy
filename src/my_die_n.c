@@ -10,8 +10,8 @@
 
 #include  <my.h>
 
-int	my_die_n(char *err_msg, int n)
+int	my_die_n(const char *s, int n)
 {
-  my_puterr(err_msg);
+  my_puterr(s);
   return (n);
 }

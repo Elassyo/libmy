@@ -10,15 +10,12 @@
 
 #include <my.h>
 
-int	my_str_isalpha(char *str)
+int	my_str_isalpha(const char *s)
 {
-  int	ret;
-
-  ret = 1;
-  while (*str)
+  while (*s)
     {
-      if (!my_isalpha(*str++))
-	ret = 0;
+      if (!my_isalpha(*s++))
+	return (0);
     }
-  return (ret);
+  return (1);
 }
