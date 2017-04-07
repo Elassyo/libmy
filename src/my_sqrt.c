@@ -12,16 +12,16 @@
 
 int	my_sqrt(unsigned int x)
 {
-  int	h;
-  int	l;
-  int	m;
+  long	h;
+  long	l;
+  long	m;
 
   h = x;
   l = 0;
-  m = x / 2;
+  m = x / 2 + x % 2;
   while (h - l > 1 && m * m != x)
     {
-      if (m * m < x)
+      if (m * m <= x)
       	l = m;
       else
       	h = m;

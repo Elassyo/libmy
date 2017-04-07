@@ -18,6 +18,8 @@ char			*my_strtok(char *s, const char *delimiters)
 
   if (!s && !(s = st_str))
     return (NULL);
+  while (*s && my_strchr(delimiters, *s))
+    s++;
   i = 0;
   while (s[i])
     {
@@ -25,11 +27,10 @@ char			*my_strtok(char *s, const char *delimiters)
 	{
 	  s[i] = 0;
 	  st_str = s + i + 1;
-	  while (*st_str && my_strchr(delimiters, *st_str))
-	    st_str++;
+	  return (s);
 	}
       else
 	i++;
     }
-  return (s[i] ? s : NULL);
+  return (NULL);
 }
