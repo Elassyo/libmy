@@ -8,6 +8,7 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
+#include <stddef.h>
 #include <my.h>
 
 const char	*my_strstr(const char *haystack, const char *needle)
