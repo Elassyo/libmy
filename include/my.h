@@ -121,7 +121,7 @@ double		my_strtod(const char *s, char **endptr);
 unsigned long	my_rand();
 void		my_srand(unsigned long seed);
 
-void		*my_realloc(void *src, size_t old, size_t new, size_t element);
+void		*my_realloc(void *src, size_t old, size_t _new, size_t elem);
 
 /*
 ** string.h: strings and memory handling

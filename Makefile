@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Sat Apr  8 19:34:55 2017 Arthur Melin
+## Last update Sat Apr  8 21:43:39 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -40,6 +40,7 @@ SRCS		=	my_atof.c		\
 			my_memset.c		\
 			my_pow.c		\
 			my_printf.c		\
+			my_rand.c		\
 			my_read_file_bin.c	\
 			my_read_file.c		\
 			my_read_line.c		\
