@@ -8,7 +8,7 @@
 ** Last update Thu Apr  6 18:02:39 2017 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 char			*my_strtok(char *s, const char *delimiters)

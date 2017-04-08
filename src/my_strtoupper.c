@@ -8,7 +8,7 @@
 ** Last update Sat Apr  8 18:17:52 2017 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 char			*my_strtoupper(char *s)

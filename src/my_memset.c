@@ -8,7 +8,7 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 void			*my_memset(void *ptr, int c, size_t n)

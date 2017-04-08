@@ -8,7 +8,7 @@
 ** Last update Thu Apr  6 15:44:57 2017 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 void		my_sort_int_tab(int *tab, size_t n)

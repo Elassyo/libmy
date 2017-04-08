@@ -8,7 +8,7 @@
 ** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 int			my_strncmp(const char *s1, const char *s2, size_t n)

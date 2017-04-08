@@ -8,7 +8,7 @@
 ** Last update Thu Apr  6 23:03:27 2017 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 const void		*my_memchr(const void *s, int c, size_t n)

@@ -8,7 +8,7 @@
 ** Last update Fri Apr  7 17:17:49 2017 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 const char	*my_strrchr(const char *s, int c)

@@ -8,7 +8,7 @@
 ** Last update Tue Dec 27 23:46:16 2016 Arthur Melin
 */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <my.h>
 
 int			my_memcmp(const void *s1, const void *s2, size_t n)
