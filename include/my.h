@@ -54,6 +54,13 @@
 # define my_swap_str(a, b)	my_swap_ptr(a, b)
 
 /*
+** Boolean type
+*/
+# define bool	char
+# define TRUE	1
+# define FALSE	0
+
+/*
 ** Multiline macros as functions (aka norme dodging)
 */
 int	my_die_n(const char *s, const int n);
