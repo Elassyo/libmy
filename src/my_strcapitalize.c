@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Mon Nov  7 15:41:49 2016 Arthur Melin
+** Last update Sat Apr  8 18:13:46 2017 Arthur Melin
 */
 
 #include <my.h>
@@ -19,10 +19,7 @@ char	*my_strcapitalize(char *s)
   in = 0;
   while (s[i])
     {
-      if (in && my_isupper(s[i]))
-	s[i] += 32;
-      if (!in && my_islower(s[i]))
-	s[i] -= 32;
+      s[i] = in ? my_tolower(s[i]) : my_toupper(s[i]);
       in = my_isalnum(s[i++]);
     }
   return (s);

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Thu Apr  6 18:07:27 2017 Arthur Melin
+** Last update Sat Apr  8 18:18:59 2017 Arthur Melin
 */
 
 #ifndef MY_H_
@@ -105,10 +105,17 @@ double	my_atof(const char *s);
 */
 int	my_isalnum(int c);
 int	my_isalpha(int c);
-int	my_isupper(int c);
-int	my_islower(int c);
+int	my_isblank(int c);
+int	my_iscntrl(int c);
 int	my_isdigit(int c);
+int	my_isgraph(int c);
+int	my_islower(int c);
 int	my_isprint(int c);
+int	my_ispunct(int c);
+int	my_isupper(int c);
+int	my_isxdigit(int c);
+int	my_tolower(int c);
+int	my_toupper(int c);
 
 /*
 ** ctype.h functions extended for strings
@@ -123,8 +130,8 @@ int	my_str_isprint(const char *s);
 ** CPool string manipulation functions
 */
 char	*my_revstr(char *s);
-char	*my_strupcase(char *s);
-char	*my_strlowcase(char *s);
+char	*my_strtolower(char *s);
+char	*my_strtoupper(char *s);
 char	*my_strcapitalize(char *s);
 
 /*

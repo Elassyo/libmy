@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Fri Apr  7 17:37:27 2017 Arthur Melin
+## Last update Sat Apr  8 18:20:01 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -27,6 +27,11 @@ SRCS		=	my_atof.c		\
 			my_islower.c		\
 			my_isprint.c		\
 			my_isupper.c		\
+		        my_isblank.c		\
+		        my_iscntrl.c		\
+		        my_isgraph.c		\
+		        my_ispunct.c		\
+		        my_isxdigit.c		\
 			my_memchr.c		\
 			my_memcmp.c		\
 			my_memcpy.c		\
@@ -57,16 +62,18 @@ SRCS		=	my_atof.c		\
 			my_str_isprint.c	\
 			my_str_isupper.c	\
 			my_strlen.c		\
-			my_strlowcase.c		\
 			my_strncat.c		\
 			my_strncmp.c		\
 			my_strncpy.c		\
 			my_strrchr.c		\
 			my_strstr.c		\
 			my_strtok.c		\
+			my_strtolower.c		\
+			my_strtoupper.c		\
 			my_str_to_wordtab.c	\
-			my_strupcase.c		\
 			my_swap.c		\
+			my_tolower.c		\
+			my_toupper.c		\
 			my_vfprintf.c		\
 			my_vfprintf_chars.c	\
 			my_vfprintf_func_map.c	\

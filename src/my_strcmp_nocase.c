@@ -19,8 +19,8 @@ int	my_strcmp_nocase(const char *s1, const char *s2)
 
   s1_u = my_strdup(s1);
   s2_u = my_strdup(s2);
-  s1 = my_strupcase(s1_u);
-  s2 = my_strupcase(s2_u);
+  s1 = my_strtolower(s1_u);
+  s2 = my_strtolower(s2_u);
   while (*s1 && *s2 && *s1 == *s2)
     {
       s1++;
