@@ -8,26 +8,14 @@
 ** Last update Mon Dec  5 10:54:37 2016 Arthur Melin
 */
 
-#include <stdlib.h>
 #include <my.h>
 
 int	my_strcmp_nocase(const char *s1, const char *s2)
 {
-  int	ret;
-  char	*s1_u;
-  char	*s2_u;
-
-  s1_u = my_strdup(s1);
-  s2_u = my_strdup(s2);
-  s1 = my_strtolower(s1_u);
-  s2 = my_strtolower(s2_u);
-  while (*s1 && *s2 && *s1 == *s2)
+  while (*s1 && *s2 && my_tolower(*s1) == my_tolower(*s2))
     {
       s1++;
       s2++;
     }
-  ret = *s1 - *s2;
-  free(s1_u);
-  free(s2_u);
-  return (ret);
+  return (my_tolower(*s1) - my_tolower(*s2));
 }

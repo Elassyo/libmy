@@ -18,7 +18,7 @@ int			my_strncmp(const char *s1, const char *s2, size_t n)
   i = 0;
   while (*s1 && *s2 && *s1 == *s2 && i < n)
     {
-      if (i++ < n)
+      if (++i < n)
 	{
 	  s1++;
 	  s2++;

@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Sat Apr  8 18:18:59 2017 Arthur Melin
+** Last update Sat Apr  8 23:05:56 2017 Arthur Melin
 */
 
 /*
@@ -44,6 +44,7 @@ int	my_isgraph(int c);
 int	my_islower(int c);
 int	my_isprint(int c);
 int	my_ispunct(int c);
+int	my_isspace(int c);
 int	my_isupper(int c);
 int	my_isxdigit(int c);
 int	my_str_isalpha(const char *s);
@@ -114,9 +115,8 @@ void			my_iobuf_puts(t_iobuf *iobuf, const char *s);
 int		my_atoi(const char *s);
 long		my_atol(const char *s);
 double		my_atod(const char *s);
-int		my_strtoi(const char *s, char **endptr);
-long		my_strtol(const char *s, char **endptr);
-double		my_strtod(const char *s, char **endptr);
+long		my_strtol(const char *s, const char **endptr, int base);
+double		my_strtod(const char *s, const char **endptr);
 
 unsigned long	my_rand();
 void		my_srand(unsigned long seed);
