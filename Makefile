@@ -109,6 +109,7 @@ $(NAME): $(addprefix $(OBJSDIR)/, $(OBJS))
 dist: $(NAME) | $(DIST_INCSDIR) clean
 	$(CP) $(addprefix $(INCSDIR)/,$(DIST_INCS)) $(DIST_INCSDIR)/
 	$(RM) .git
+	$(RM) README.md
 
 $(DIST_INCSDIR):
 	$(MKDIR) $@
