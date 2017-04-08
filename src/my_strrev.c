@@ -1,5 +1,5 @@
 /*
-** my_revstr.c for libmy in /home/arthur.melin/Code/libmy
+** my_strrev.c for libmy in /home/arthur.melin/Code/libmy
 **
 ** Made by Arthur Melin
 ** Login   <arthur.melin@epitech.eu>
@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <my.h>
 
-char			*my_revstr(char *s)
+char			*my_strrev(char *s)
 {
   size_t		len;
   size_t		hlen;

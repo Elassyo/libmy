@@ -41,7 +41,7 @@ int			my_vfprintf_nbr_dec_s(int fd, t_vfprintf_fmt *fmt,
     }
   else
     nbr_fmt.prefix = "";
-  return (my_vfprintf_nbr(fd, &nbr_fmt, MY_ABS(nbr), written));
+  return (my_vfprintf_nbr(fd, &nbr_fmt, my_abs(nbr), written));
 }
 
 int			my_vfprintf_nbr_dec_u(int fd, t_vfprintf_fmt *fmt,

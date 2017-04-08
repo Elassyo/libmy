@@ -60,7 +60,7 @@ int		my_vfprintf_nbr(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
   if (!nbr_fmt->fmt->flag_ljust && !nbr_fmt->fmt->flag_zero)
     {
       padding = nbr_fmt->fmt->field_width -
-		MY_MAX(length, nbr_fmt->fmt->precision);
+		my_max(length, nbr_fmt->fmt->precision);
       while (padding-- > 0 && ++written)
 	my_fputc(fd, ' ');
     }
