@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Mon Apr 17 17:09:57 2017 Arthur Melin
+## Last update Mon Apr 17 18:23:06 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -49,7 +49,6 @@ SRCS		=	my_atof.c		\
 			my_realloc.c		\
 			my_show_wordtab.c	\
 			my_sort_int_tab.c	\
-			my_sqrt.c		\
 			my_strcapitalize.c	\
 			my_strcat.c		\
 			my_strchr.c		\
@@ -72,6 +71,7 @@ SRCS		=	my_atof.c		\
 			my_strrev.c		\
 			my_strspn.c		\
 			my_strstr.c		\
+			my_strtod.c		\
 			my_strtok.c		\
 			my_strtol.c		\
 			my_strtolower.c		\

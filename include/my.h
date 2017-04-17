@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Wed Apr 12 13:21:54 2017 Arthur Melin
+** Last update Mon Apr 17 18:30:24 2017 Arthur Melin
 */
 
 /*
@@ -61,11 +61,21 @@ char	*my_strtoupper(char *s);
 char	*my_strcapitalize(char *s);
 
 /*
-** math.h: simplified math definitions and a few functions
+** math.h: math definitions, macros and power function with some dirty hacks
+** to get a non-signaling NaN float
 */
+typedef union		u_bin2float
+{
+  int			b;
+  float			f;
+}			t_bin2float;
+
+static t_bin2float __attribute__ ((unused))	__my_infinity = { 0x7f800000 };
+static t_bin2float __attribute__ ((unused))	__my_nan = { 0x7fffffff };
+
+# define MY_INFINITY		__my_infinity.f
+# define MY_NAN			__my_nan.f
 # define MY_PI			3.14159265359
-# define MY_INFINITY		(1.0 / 0.0)
-# define MY_NAN			(0.0 / 0.0)
 
 # define my_abs(x)		(x < 0 ? -x : x)
 # define my_min(a, b)		(a < b ? a : b)
@@ -73,8 +83,7 @@ char	*my_strcapitalize(char *s);
 # define my_clamp(v, l, h)	(l > v ? l : v < h ? v : h)
 # define my_sq(x)		(x * x)
 
-double				my_pow(double x, unsigned int y);
-int				my_sqrt(unsigned int x);
+double				my_pow(double x, int y);
 
 /*
 ** stdio.h: some IO functions (putting, formatting and buffered)
@@ -113,8 +122,8 @@ void			my_iobuf_puts(t_iobuf *iobuf, const char *s);
 int		my_atoi(const char *s);
 long		my_atol(const char *s);
 double		my_atof(const char *s);
-long		my_strtol(const char *s, const char **endptr, int base);
-double		my_strtod(const char *s, const char **endptr);
+long		my_strtol(const char *s, char **endptr, int base);
+double		my_strtod(const char *s, char **endptr);
 
 unsigned long	my_rand();
 void		my_srand(unsigned long seed);
