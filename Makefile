@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Sat Apr  8 23:45:46 2017 Arthur Melin
+## Last update Mon Apr 17 17:09:57 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -37,6 +37,7 @@ SRCS		=	my_atof.c		\
 			my_memcmp.c		\
 			my_memcpy.c		\
 			my_memdup.c		\
+			my_memmove.c		\
 			my_memrchr.c		\
 			my_memset.c		\
 			my_pow.c		\
@@ -55,6 +56,7 @@ SRCS		=	my_atof.c		\
 			my_strcmp.c		\
 			my_strcmp_nocase.c	\
 			my_strcpy.c		\
+			my_strcspn.c		\
 			my_strdup.c		\
 			my_str_isalpha.c	\
 			my_str_isdigit.c	\
@@ -68,6 +70,7 @@ SRCS		=	my_atof.c		\
 			my_strncpy.c		\
 			my_strrchr.c		\
 			my_strrev.c		\
+			my_strspn.c		\
 			my_strstr.c		\
 			my_strtok.c		\
 			my_strtol.c		\

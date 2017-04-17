@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Sat Apr  8 22:26:44 2017 Arthur Melin
-** Last update Sat Apr  8 23:47:55 2017 Arthur Melin
+** Last update Wed Apr 12 13:14:20 2017 Arthur Melin
 */
 
 #include <stdlib.h>
@@ -15,7 +15,7 @@ static int	base_detect(const char **s, int base)
 {
   if (base == 0)
     {
-      if (*s == '0')
+      if (**s == '0')
 	base = my_strncmp_nocase(*s, "0x", 2) ? 8 : 16;
       else
 	return (-1);

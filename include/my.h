@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Sat Apr  8 23:05:56 2017 Arthur Melin
+** Last update Wed Apr 12 13:21:54 2017 Arthur Melin
 */
 
 /*
@@ -23,6 +23,7 @@
 
 # include <stdarg.h>
 # include <stddef.h>
+# include <stdbool.h>
 # include <unistd.h>
 
 /*
@@ -60,7 +61,7 @@ char	*my_strtoupper(char *s);
 char	*my_strcapitalize(char *s);
 
 /*
-** math.h: math definitions and a few functions
+** math.h: simplified math definitions and a few functions
 */
 # define MY_PI			3.14159265359
 # define MY_INFINITY		(1.0 / 0.0)
@@ -74,13 +75,6 @@ char	*my_strcapitalize(char *s);
 
 double				my_pow(double x, unsigned int y);
 int				my_sqrt(unsigned int x);
-
-/*
-** stdbool.h: boolean type
-*/
-# define bool	char
-# define true	1
-# define false	0
 
 /*
 ** stdio.h: some IO functions (putting, formatting and buffered)
@@ -112,9 +106,13 @@ void			my_iobuf_puts(t_iobuf *iobuf, const char *s);
 /*
 ** stdlib.h: string conversion, random number generator and array reallocator
 */
+# define MY_EXIT_SUCCESS	0
+# define MY_EXIT_FAILURE	84
+# define MY_RAND_MAX		18446744073709551615
+
 int		my_atoi(const char *s);
 long		my_atol(const char *s);
-double		my_atod(const char *s);
+double		my_atof(const char *s);
 long		my_strtol(const char *s, const char **endptr, int base);
 double		my_strtod(const char *s, const char **endptr);
 
@@ -138,6 +136,7 @@ int		my_memcmp(const void *s1, const void *s2, size_t n);
 int		my_strcmp(const char *s1, const char *s2);
 int		my_strcmp_nocase(const char *s1, const char *s2);
 int		my_strncmp(const char *s1, const char *s2, size_t n);
+int		my_strncmp_nocase(const char *s1, const char *s2, size_t n);
 
 void		*my_memdup(const void *src, size_t n);
 char		*my_strdup(const char *s);
