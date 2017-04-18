@@ -38,7 +38,7 @@ typedef struct		s_vfprintf_nbr_fmt
   char			*prefix;
 }			t_vfprintf_nbr_fmt;
 
-typedef int (t_vfprintf_func)(int, t_vfprintf_fmt *, va_list *, int *);
+typedef int	t_vfprintf_func(int, t_vfprintf_fmt *, va_list *, int *);
 
 typedef struct		s_vfprintf_func_map
 {
@@ -54,21 +54,29 @@ void	my_vfprintf_parse_length(t_vfprintf_fmt *f, const char **s);
 void	my_vfprintf_func_map_fill(t_vfprintf_func_map *map);
 
 int	my_vfprintf_nbr(int fd, t_vfprintf_nbr_fmt *fmt,
-		       uintmax_t nbr, int *written_ptr);
+			uintmax_t nbr, int *written_ptr);
 
 uintmax_t	my_vfprintf_arg_mask(size_t length_modifier);
 
-t_vfprintf_func	my_vfprintf_nbr_dec_s;
-t_vfprintf_func	my_vfprintf_nbr_dec_u;
-t_vfprintf_func	my_vfprintf_nbr_oct;
-t_vfprintf_func	my_vfprintf_nbr_bin;
-t_vfprintf_func	my_vfprintf_nbr_hex_l;
-t_vfprintf_func	my_vfprintf_nbr_hex_u;
-t_vfprintf_func	my_vfprintf_chr;
-t_vfprintf_func	my_vfprintf_str;
-t_vfprintf_func	my_vfprintf_str_np;
-t_vfprintf_func	my_vfprintf_ptr;
-t_vfprintf_func	my_vfprintf_wrt;
-t_vfprintf_func	my_vfprintf_pct;
+t_vfprintf_func		my_vfprintf_nbr_dec_s;
+t_vfprintf_func		my_vfprintf_nbr_dec_u;
+t_vfprintf_func		my_vfprintf_nbr_oct;
+t_vfprintf_func		my_vfprintf_nbr_bin;
+t_vfprintf_func		my_vfprintf_nbr_hex_l;
+t_vfprintf_func		my_vfprintf_nbr_hex_u;
+t_vfprintf_func		my_vfprintf_flt_dec_l;
+t_vfprintf_func		my_vfprintf_flt_dec_u;
+t_vfprintf_func		my_vfprintf_flt_sci_l;
+t_vfprintf_func		my_vfprintf_flt_sci_u;
+t_vfprintf_func		my_vfprintf_flt_auto_l;
+t_vfprintf_func		my_vfprintf_flt_auto_u;
+t_vfprintf_func		my_vfprintf_flt_hex_l;
+t_vfprintf_func		my_vfprintf_flt_hex_u;
+t_vfprintf_func		my_vfprintf_chr;
+t_vfprintf_func		my_vfprintf_str;
+t_vfprintf_func		my_vfprintf_str_np;
+t_vfprintf_func		my_vfprintf_ptr;
+t_vfprintf_func		my_vfprintf_wrt;
+t_vfprintf_func		my_vfprintf_pct;
 
 #endif /* !MY_VFPRINTF_H_ */
