@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 22:14:18 2016 Arthur Melin
-** Last update Tue Mar 14 22:15:01 2017 Arthur Melin
+** Last update Thu Apr 20 09:24:44 2017 Arthur Melin
 */
 
 #ifndef MY_VFPRINTF_H_
@@ -64,14 +64,6 @@ t_vfprintf_func		my_vfprintf_nbr_oct;
 t_vfprintf_func		my_vfprintf_nbr_bin;
 t_vfprintf_func		my_vfprintf_nbr_hex_l;
 t_vfprintf_func		my_vfprintf_nbr_hex_u;
-t_vfprintf_func		my_vfprintf_flt_dec_l;
-t_vfprintf_func		my_vfprintf_flt_dec_u;
-t_vfprintf_func		my_vfprintf_flt_sci_l;
-t_vfprintf_func		my_vfprintf_flt_sci_u;
-t_vfprintf_func		my_vfprintf_flt_auto_l;
-t_vfprintf_func		my_vfprintf_flt_auto_u;
-t_vfprintf_func		my_vfprintf_flt_hex_l;
-t_vfprintf_func		my_vfprintf_flt_hex_u;
 t_vfprintf_func		my_vfprintf_chr;
 t_vfprintf_func		my_vfprintf_str;
 t_vfprintf_func		my_vfprintf_str_np;

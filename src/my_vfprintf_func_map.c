@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov 14 17:03:51 2016 Arthur Melin
-** Last update Mon Feb 27 15:07:45 2017 Arthur Melin
+** Last update Thu Apr 20 09:23:46 2017 Arthur Melin
 */
 
 #include <my_vfprintf.h>
@@ -29,14 +29,6 @@ void	my_vfprintf_func_map_fill(t_vfprintf_func_map *map)
   my_vfprintf_func_map_put(map, i++, 'b', my_vfprintf_nbr_bin);
   my_vfprintf_func_map_put(map, i++, 'x', my_vfprintf_nbr_hex_l);
   my_vfprintf_func_map_put(map, i++, 'X', my_vfprintf_nbr_hex_u);
-  my_vfprintf_func_map_put(map, i++, 'f', my_vfprintf_flt_dec_l);
-  my_vfprintf_func_map_put(map, i++, 'F', my_vfprintf_flt_dec_u);
-  my_vfprintf_func_map_put(map, i++, 'e', my_vfprintf_flt_sci_l);
-  my_vfprintf_func_map_put(map, i++, 'E', my_vfprintf_flt_sci_u);
-  my_vfprintf_func_map_put(map, i++, 'g', my_vfprintf_flt_auto_l);
-  my_vfprintf_func_map_put(map, i++, 'G', my_vfprintf_flt_auto_u);
-  my_vfprintf_func_map_put(map, i++, 'a', my_vfprintf_flt_hex_l);
-  my_vfprintf_func_map_put(map, i++, 'A', my_vfprintf_flt_hex_u);
   my_vfprintf_func_map_put(map, i++, 'c', my_vfprintf_chr);
   my_vfprintf_func_map_put(map, i++, 's', my_vfprintf_str);
   my_vfprintf_func_map_put(map, i++, 'S', my_vfprintf_str_np);
