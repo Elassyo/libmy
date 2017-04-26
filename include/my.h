@@ -167,10 +167,10 @@ size_t		my_strlen(const char *s);
 /*
 ** Die macro-like functions to use in returns
 */
-# define my_die(s)	my_die_n(s, 84)
 
-int			my_die_n(const char *s, int n);
-void			*my_die_null(const char *s);
+int			my_die(const char *fmt, ...);
+int			my_die_n(int n, const char *fmt, ...);
+void			*my_die_null(const char *fmt, ...);
 
 /*
 ** Swapping functions
