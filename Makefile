@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Mon Apr 17 18:23:06 2017 Arthur Melin
+## Last update Wed Apr 26 20:17:26 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -13,6 +13,7 @@ NAME		=	libmy.a
 SRCS		=	my_atof.c		\
 			my_atoi.c		\
 			my_atol.c		\
+			my_die.c		\
 			my_die_n.c		\
 			my_die_null.c		\
 			my_fprintf.c		\
