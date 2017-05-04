@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Mon Apr 17 18:30:24 2017 Arthur Melin
+** Last update Thu May  4 16:12:44 2017 Arthur Melin
 */
 
 /*
@@ -89,7 +89,7 @@ double				my_pow(double x, int y);
 ** stdio.h: some IO functions (putting, formatting and buffered)
 */
 # define my_putc(c)	my_fputc(STDOUT_FILENO, c)
-# define my_putnc(c)	my_fputnc(STDOUT_FILENO, c)
+# define my_putnc(c, n)	my_fputnc(STDOUT_FILENO, c, n)
 # define my_puts(s)	my_fputs(STDOUT_FILENO, s)
 # define my_puterr(s)	my_fputs(STDERR_FILENO, s)
 
