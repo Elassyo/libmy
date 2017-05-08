@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Wed Apr 26 20:17:26 2017 Arthur Melin
+## Last update Mon May  8 02:33:44 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -103,8 +103,8 @@ DIST_INCS	=	my.h
 DIST_INCSDIR	=	../../include
 
 CC		=	gcc
-CFLAGS		=	-c -I$(INCSDIR) -O2 -W -Wall -Wextra -std=c89 -pedantic
-AR		=	ar -rc
+CFLAGS		=	-c -I$(INCSDIR) -O2 -fPIC -W -Wall -Wextra -std=c89 -pedantic
+AR		=	ar rcs
 CP		=	cp
 MKDIR		=	mkdir -p
 RM		=	rm -rf
