@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Tue Nov 15 17:04:47 2016 Arthur Melin
-** Last update Thu Apr  6 22:33:40 2017 Arthur Melin
+** Last update Tue May  9 23:32:23 2017 Arthur Melin
 */
 
 #include <my_vfprintf.h>
@@ -43,7 +43,7 @@ int	my_vfprintf_nbr_digits(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
   while (padding-- > 0 && ++written)
     my_fputc(fd, nbr_fmt->base[0]);
   while (len-- && ++written)
-    my_fputc(fd, nbr_fmt->base[nbr / (int)my_pow(base_len, len) % base_len]);
+    my_fputc(fd, nbr_fmt->base[nbr / (uintmax_t)my_pow(base_len, len) % base_len]);
   return (written);
 }
 
