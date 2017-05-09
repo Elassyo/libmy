@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Thu May  4 16:12:44 2017 Arthur Melin
+** Last update Tue May  9 23:39:24 2017 Arthur Melin
 */
 
 /*
@@ -31,7 +31,7 @@
 */
 # define MY_STR(v)		#v
 # define MY_STRMACRO(m)		MY_STR(m)
-# define MY_ASSERT(s)		__FILE__ "(" MY_STRMACRO(__LINE__) "):" s
+# define MY_ASSERT(s)		__FILE__ "(" MY_STRMACRO(__LINE__) "): " s
 
 /*
 ** ctype.h: character handling functions + extensions to string
