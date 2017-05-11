@@ -8,7 +8,7 @@
 ** Last update Thu May 11 14:27:18 2017 Arthur Melin
 */
 
-#include <stddef.h>
+#include <stdlib.h>
 #include <my.h>
 
 void	*my_calloc(size_t size)
