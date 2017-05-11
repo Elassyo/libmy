@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Mon Nov  7 15:41:44 2016 Arthur Melin
-** Last update Tue May  9 23:39:24 2017 Arthur Melin
+** Last update Thu May 11 14:29:55 2017 Arthur Melin
 */
 
 /*
@@ -128,7 +128,9 @@ double		my_strtod(const char *s, char **endptr);
 unsigned long	my_rand();
 void		my_srand(unsigned long seed);
 
-void		*my_realloc(void *src, size_t old, size_t _new, size_t elem);
+void		*my_calloc(size_t size);
+void		*my_realloc(void *old_ptr, size_t old_sz,
+			    size_t new_sz, size_t elem_sz);
 
 /*
 ** string.h: strings and memory handling

@@ -5,21 +5,22 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Wed Dec  7 13:51:14 2016 Arthur Melin
-** Last update Tue May  2 16:36:47 2017 Arthur Melin
+** Last update Thu May 11 14:31:10 2017 Arthur Melin
 */
 
 #include <stdlib.h>
 #include <my.h>
 
-void	*my_realloc(void *src, size_t old, size_t new, size_t element)
+void	*my_realloc(void *old_ptr, size_t old_sz,
+		    size_t new_sz, size_t elem_sz)
 {
-  void	*res;
+  void	*new_ptr;
 
-  if (!(res = malloc(new * element)))
+  if (!(new_ptr = malloc(new_sz * elem_sz)))
     return (NULL);
-  if (new < old)
-    old = new;
-  my_memcpy(res, src, old * element);
-  free(src);
-  return (res);
+  if (new_sz < old_sz)
+    old_sz = new_sz;
+  my_memcpy(new_ptr, old_ptr, old_sz * elem_sz);
+  free(old_ptr);
+  return (new_ptr);
 }
