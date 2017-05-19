@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Thu Nov 17 00:20:27 2016 Arthur Melin
-** Last update Thu Apr  6 22:31:02 2017 Arthur Melin
+** Last update Fri May 19 15:37:27 2017 Arthur Melin
 */
 
 #include <my_vfprintf.h>
@@ -52,7 +52,7 @@ int		my_vfprintf_wrt(int fd __attribute__ ((__unused__)),
 }
 
 int		my_vfprintf_pct(int fd,
-				t_vfprintf_fmt *fmt __attribute__ ((__unused__)),
+				t_vfprintf_fmt *f __attribute__ ((__unused__)),
 				va_list *args __attribute__ ((__unused__)),
 				int *written_ptr)
 {
