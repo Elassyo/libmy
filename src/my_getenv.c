@@ -5,7 +5,7 @@
 ** Login   <arthur.melin@epitech.eu>
 **
 ** Started on  Sun May 21 19:28:45 2017 Arthur Melin
-** Last update Sun May 21 19:37:01 2017 Arthur Melin
+** Last update Sun May 21 19:44:12 2017 Arthur Melin
 */
 
 #include <stdlib.h>
@@ -24,6 +24,7 @@ char		*my_getenv(const char *name)
     {
       if (my_strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
 	return (environ[i] + len + 1);
+      i++;
     }
   return (NULL);
 }
