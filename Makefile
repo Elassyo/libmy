@@ -5,7 +5,7 @@
 ## Login   <arthur.melin@epitech.eu>
 ##
 ## Started on  Wed Dec 14 12:30:02 2016 Arthur Melin
-## Last update Thu May 11 14:37:28 2017 Arthur Melin
+## Last update Sun May 21 19:35:14 2017 Arthur Melin
 ##
 
 NAME		=	libmy.a
@@ -35,6 +35,7 @@ SRCS		=	my_atof.c		\
 			my_isspace.c		\
 			my_isupper.c		\
 			my_isxdigit.c		\
+			my_getenv.c		\
 			my_memchr.c		\
 			my_memcmp.c		\
 			my_memcpy.c		\
