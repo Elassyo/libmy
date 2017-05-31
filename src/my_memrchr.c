@@ -21,7 +21,7 @@ const void		*my_memrchr(const void *s, int c, size_t n)
   while (i < n)
     {
       if (*((char *)s + i) == c)
-      	res = (char *)s + i;
+	res = (char *)s + i;
       i++;
     }
   return (res);

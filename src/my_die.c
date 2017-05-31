@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <my.h>
 
-int	my_die(const char *fmt, ...)
+int		my_die(const char *fmt, ...)
 {
   va_list	va;
 

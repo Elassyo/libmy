@@ -33,7 +33,7 @@ typedef struct	s_vfprintf_fmt
 
 typedef struct		s_vfprintf_nbr_fmt
 {
-  t_vfprintf_fmt 	*fmt;
+  t_vfprintf_fmt	*fmt;
   char			*base;
   char			*prefix;
 }			t_vfprintf_nbr_fmt;

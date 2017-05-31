@@ -16,7 +16,7 @@ const char	*my_strchr(const char *s, int c)
   while (*s)
     {
       if (*s == c)
-      	return (s);
+return (s);
       s++;
     }
   return (NULL);

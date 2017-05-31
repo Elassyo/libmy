@@ -46,10 +46,10 @@ static int		my_vfprintf_do(int fd, const char *str,
   while (i < 13)
     {
       if (func_map[i].chr == fmt.specifier)
-      	{
-      	  i = func_map[i].func(fd, &fmt, args, written);
-      	  return (i ? 0 : str - str_start);
-      	}
+	{
+	  i = func_map[i].func(fd, &fmt, args, written);
+	  return (i ? 0 : str - str_start);
+	}
       i++;
     }
   return (0);

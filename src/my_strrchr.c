@@ -19,7 +19,7 @@ const char	*my_strrchr(const char *s, int c)
   while (*s)
     {
       if (*s == c)
-      	res = s;
+	res = s;
       s++;
     }
   return (res);

@@ -77,11 +77,11 @@ static t_bin2float __attribute__ ((unused))	__my_nan = { 0x7fffffff };
 # define MY_NAN			__my_nan.f
 # define MY_PI			3.14159265359
 
-# define my_abs(x)		(x < 0 ? -x : x)
-# define my_min(a, b)		(a < b ? a : b)
-# define my_max(a, b)		(a > b ? a : b)
-# define my_clamp(v, l, h)	(l > v ? l : v < h ? v : h)
-# define my_sq(x)		(x * x)
+# define my_abs(x)		((x) < 0 ? -(x) : (x))
+# define my_min(a, b)		((a) < (b) ? (a) : (b))
+# define my_max(a, b)		((a) > (b) ? (a) : (b))
+# define my_clamp(v, l, h)	((l) > (v) ? (l) : (v) < (h) ? (v) : (h))
+# define my_sq(x)		((x) * (x))
 
 double				my_pow(double x, int y);
 

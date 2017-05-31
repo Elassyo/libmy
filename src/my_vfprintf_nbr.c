@@ -31,10 +31,10 @@ int	my_vfprintf_nbr_digits(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
 {
   int	len;
   int	padding;
-  int	base_len;
+  int	blen;
 
-  base_len = my_strlen(nbr_fmt->base);
-  len = my_vfprintf_nbr_length(nbr_fmt->fmt, nbr, base_len);
+  blen = my_strlen(nbr_fmt->base);
+  len = my_vfprintf_nbr_length(nbr_fmt->fmt, nbr, blen);
   if (!nbr_fmt->fmt->flag_ljust && nbr_fmt->fmt->flag_zero &&
       nbr_fmt->fmt->precision == -1)
     padding = nbr_fmt->fmt->field_width - len;
@@ -43,7 +43,7 @@ int	my_vfprintf_nbr_digits(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
   while (padding-- > 0 && ++written)
     my_fputc(fd, nbr_fmt->base[0]);
   while (len-- && ++written)
-    my_fputc(fd, nbr_fmt->base[nbr / (uintmax_t)my_pow(base_len, len) % base_len]);
+    my_fputc(fd, nbr_fmt->base[nbr / (uintmax_t)my_pow(blen, len) % blen]);
   return (written);
 }
 
@@ -71,7 +71,7 @@ int		my_vfprintf_nbr(int fd, t_vfprintf_nbr_fmt *nbr_fmt,
     }
   written = my_vfprintf_nbr_digits(fd, nbr_fmt, nbr, written);
   while (nbr_fmt->fmt->flag_ljust &&
-  	 written < nbr_fmt->fmt->field_width && ++written)
+	 written < nbr_fmt->fmt->field_width && ++written)
     my_fputc(fd, ' ');
   *written_ptr += written;
   return (0);

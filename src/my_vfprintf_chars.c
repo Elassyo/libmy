@@ -32,7 +32,7 @@ int	my_vfprintf_chr(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - 1  > 0 && fmt->field_width-- && ++written)
-      	my_fputc(fd, ' ');
+	my_fputc(fd, ' ');
     }
   my_fputc(fd, va_arg(*args, int));
   written++;
@@ -56,7 +56,7 @@ int	my_vfprintf_str(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - length > 0 && fmt->field_width-- && ++written)
-      	my_fputc(fd, ' ');
+	my_fputc(fd, ' ');
     }
   my_fputs(fd, str);
   written += length;
@@ -80,7 +80,7 @@ int	my_vfprintf_str_np(int fd, t_vfprintf_fmt *fmt,
   if (!fmt->flag_ljust)
     {
       while (fmt->field_width - length > 0 && fmt->field_width-- && ++written)
-      	my_fputc(fd, ' ');
+	my_fputc(fd, ' ');
     }
   while (*str)
     {

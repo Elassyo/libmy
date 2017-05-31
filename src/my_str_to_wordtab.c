@@ -21,7 +21,7 @@ static int	my_count_words(const char *s)
   while (*s)
     {
       if (!in && my_isalnum(*s))
-      	res++;
+	res++;
       in = my_isalnum(*s++);
     }
   return (res);
